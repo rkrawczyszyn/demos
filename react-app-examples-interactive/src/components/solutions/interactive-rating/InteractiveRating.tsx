@@ -31,9 +31,13 @@ export const InteractiveRating = (): JSX.Element => {
     { value: 5, selected: false },
   ]);
 
-  const [showSummary, setShowSummary] = useState<boolean>(false);
+  const [isRatingSubmitted, setIsRatingSubmitted] = useState<boolean>(false);
 
   const handleOnScoreClick = (value: number) => {
+    if (isRatingSubmitted) {
+      return;
+    }
+
     setScoresAvailable(
       scoresAvailable.map((x) => {
         if (x.value === value) {
@@ -49,7 +53,7 @@ export const InteractiveRating = (): JSX.Element => {
   };
 
   const handleSubmit = () => {
-    setShowSummary(!showSummary);
+    setIsRatingSubmitted(!isRatingSubmitted);
   };
 
   return (
@@ -75,12 +79,16 @@ export const InteractiveRating = (): JSX.Element => {
               <VoteScore value={sa.value} key={sa.value} selected={sa.selected} onScoreClick={handleOnScoreClick} />
             ))}
           </div>
-          <button className="btn-submit" onClick={handleSubmit}>
+          <button
+            className="btn-submit"
+            onClick={handleSubmit}
+            disabled={scoresAvailable.every((x) => x.selected === false)}
+          >
             Submit
           </button>
         </div>
       </div>
-      {showSummary && (
+      {isRatingSubmitted && (
         <div className="background">
           <div className="container">
             <div className="submission-img-container">
