@@ -7,6 +7,7 @@ interface AppRoute {
   index: number;
   route: string;
   view: JSX.Element;
+  isIndexRoute: boolean;
 }
 
 const AppRoutes: AppRoute[] = [
@@ -15,18 +16,21 @@ const AppRoutes: AppRoute[] = [
     index: 0,
     route: '/demos/',
     view: <Home />,
+    isIndexRoute: true,
   },
   {
     key: 1,
     index: 1,
     route: '/interactive-rating/',
     view: <InteractiveRating />,
+    isIndexRoute: false,
   },
   {
     key: 2,
     index: 2,
     route: '/results-summary/',
     view: <ResultsSummary />,
+    isIndexRoute: false,
   },
 ];
 
