@@ -13,19 +13,19 @@ const AppRoutes: AppRoute[] = [
   {
     key: 0,
     index: 0,
-    route: '/',
+    route: '/demos/',
     view: <Home />,
   },
   {
     key: 1,
     index: 1,
-    route: '/interactive-rating',
+    route: '/interactive-rating/',
     view: <InteractiveRating />,
   },
   {
     key: 2,
     index: 2,
-    route: '/results-summary',
+    route: '/results-summary/',
     view: <ResultsSummary />,
   },
 ];
