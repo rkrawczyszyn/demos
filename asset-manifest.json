@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/demos/static/css/main.74fbadcb.css",
+    "main.css": "/demos/static/css/main.38c60507.css",
     "main.js": "/demos/static/js/main.f7855b83.js",
     "static/js/787.cfad26ef.chunk.js": "/demos/static/js/787.cfad26ef.chunk.js",
     "static/media/HankenGrotesk-VariableFont_wght.ttf": "/demos/static/media/HankenGrotesk-VariableFont_wght.d642a5d85689aa7d33db.ttf",
@@ -9,12 +9,12 @@
     "static/media/icon-visual.svg": "/demos/static/media/icon-visual.61fc2697d5094b6e396276b1a1597c86.svg",
     "static/media/icon-verbal.svg": "/demos/static/media/icon-verbal.cc1204a0b0559da591a3ea6e99c5cf50.svg",
     "static/media/icon-reaction.svg": "/demos/static/media/icon-reaction.0c1d6b98b4559ba72276d9ceda14692d.svg",
-    "main.74fbadcb.css.map": "/demos/static/css/main.74fbadcb.css.map",
+    "main.38c60507.css.map": "/demos/static/css/main.38c60507.css.map",
     "main.f7855b83.js.map": "/demos/static/js/main.f7855b83.js.map",
     "787.cfad26ef.chunk.js.map": "/demos/static/js/787.cfad26ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74fbadcb.css",
+    "static/css/main.38c60507.css",
     "static/js/main.f7855b83.js"
   ]
 }
