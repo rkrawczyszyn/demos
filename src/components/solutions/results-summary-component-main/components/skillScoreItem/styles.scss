@@ -1,0 +1,56 @@
+@import './../../styles/config';
+
+.red-background {
+  background-color: $clr-primary-light-red;
+}
+.yellow-background {
+  background-color: $clr-primary-orangey-yellow;
+}
+.green-background {
+  background-color: $clr-primary-green-teal;
+}
+.purple-background {
+  background-color: $clr-primary-cobalt-blue;
+}
+
+.red-font-clr {
+  color: hsl(0deg 73.01% 48.78%);
+}
+.yellow-font-clr {
+  color: hsl(44.83deg 69.85% 39.49%);
+}
+.green-font-clr {
+  color: hsl(114.06deg 72.37% 28.86%);
+}
+.purple-font-clr {
+  color: hsl(246.98deg 55.09% 34.11%);
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+
+  //   border: 2px dotted red;
+  background: #1566bb73;
+
+  height: 50px;
+
+  .skill-container {
+    display: flex;
+
+    .skill-name {
+      padding-left: 8px;
+      font-weight: 700;
+    }
+  }
+  .skill-score-container {
+    .score {
+    }
+    .out-of-score {
+    }
+  }
+}

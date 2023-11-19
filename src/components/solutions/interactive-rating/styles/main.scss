@@ -1,0 +1,11 @@
+@import 'config';
+@import 'responsive';
+
+body {
+  // background-color: $clr-neutral-very-darkblue;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
