@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/rkrawczyszyn/demos || exit 1
+
 # Get the current date and time in YYYY-MM-DD HH:MM:SS format
 DATE=$(date +"%Y-%m-%d %H:%M:%S")
 
