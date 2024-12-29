@@ -28,7 +28,7 @@ const doctorDetails = JSON.parse(readFileSync(DOCTOR_DETAILS_FILE));
 
 // Generate doctor URLs
 const doctorUrls = doctorDetails.map((doctor) => {
-  return `${API_BASE_URL}/doctors/${doctor.id}/addresses/${doctor.addressId}/slots?start=${FILTER_DATE_START}T00%3A00%3A00%2B01%3A00&end=${FILTER_DATE_END}T00%3A00%3A00%2B01%3A00&includingSaasOnlyCalendar=false&with%5B%5D=address.nearest_slot_after_end&with%5B%5D=links.book.patient&with%5B%5D=slot.doctor_id&with%5B%5D=slot.address_id&with%5B%5D=slot.address&with%5B%5D=slot.with_booked&filters%5Baddress_service_id%5D=3489765&preferredAddressServiceId=3489765`;
+  return `${API_BASE_URL}/doctors/${doctor.id}/addresses/${doctor.addressId}/slots?start=${FILTER_DATE_START}T00%3A00%3A00%2B01%3A00&end=${FILTER_DATE_END}T00%3A00%3A00%2B01%3A00&includingSaasOnlyCalendar=false&with%5B%5D=address.nearest_slot_after_end&with%5B%5D=links.book.patient&with%5B%5D=slot.doctor_id&with%5B%5D=slot.address_id&with%5B%5D=slot.address&with%5B%5D=slot.with_booked`;
 });
 
 // Function to fetch slots for each doctor using built-in https
