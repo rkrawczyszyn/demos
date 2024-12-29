@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2024-12-29T14:07:01.557Z"
+    "updatedOn": "2024-12-29T16:29:07.087Z"
   },
   "slots": [
     {
@@ -1964,6 +1964,20 @@
       }
     },
     {
+      "start": "2024-12-31T11:45:00+01:00",
+      "doctor_id": 302078,
+      "address_id": 902740,
+      "booking_url": null,
+      "booked": true,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/302078/addresses/902740",
+          "method": "get"
+        }
+      }
+    },
+    {
       "start": "2024-12-31T12:30:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
@@ -2049,20 +2063,6 @@
     },
     {
       "start": "2025-01-02T08:45:00+01:00",
-      "doctor_id": 302078,
-      "address_id": 902740,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/302078/addresses/902740",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-02T11:00:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
       "booking_url": null,
