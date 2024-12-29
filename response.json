@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2024-12-29T17:17:06.369Z"
+    "updatedOn": "2024-12-29T17:18:12.029Z"
   },
   "slots": [
     {
@@ -4025,8 +4025,8 @@
       "start": "2024-12-30T15:15:00+01:00",
       "doctor_id": 333060,
       "address_id": 950114,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/333060/950114/2024-12-30T15:15:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -4053,8 +4053,8 @@
       "start": "2024-12-30T16:45:00+01:00",
       "doctor_id": 333060,
       "address_id": 950114,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/333060/950114/2024-12-30T16:45:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
