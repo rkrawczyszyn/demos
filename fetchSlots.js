@@ -1,13 +1,14 @@
 const fs = require('fs');
 const https = require('https');
+const path = require('path');
 
 // Configuration
 const API_BASE_URL = 'https://www.znanylekarz.pl/api/v3';
 const FILTER_DATE_START = '2024-12-25';
 const FILTER_DATE_END = '2025-01-24';
-const TOKEN_FILE = 'token.txt';
-const DOCTOR_DETAILS_FILE = 'doctorDetails.json';
-const OUTPUT_FILE = 'response.json';
+const TOKEN_FILE = path.resolve(__dirname, 'token.txt');
+const DOCTOR_DETAILS_FILE = path.resolve(__dirname, 'doctorDetails.json');
+const OUTPUT_FILE = path.resolve(__dirname, 'response.json');
 
 // Function to read a file and return its content as a string
 function readFileSync(filePath) {
