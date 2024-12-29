@@ -1,18 +1,18 @@
-const fs = require("fs");
-const https = require("https");
+const fs = require('fs');
+const https = require('https');
 
 // Configuration
-const API_BASE_URL = "https://www.znanylekarz.pl/api/v3";
-const FILTER_DATE_START = "2024-12-25";
-const FILTER_DATE_END = "2025-01-24";
-const TOKEN_FILE = "token.txt";
-const DOCTOR_DETAILS_FILE = "doctorDetails.json";
-const OUTPUT_FILE = "response.json";
+const API_BASE_URL = 'https://www.znanylekarz.pl/api/v3';
+const FILTER_DATE_START = '2024-12-25';
+const FILTER_DATE_END = '2025-01-24';
+const TOKEN_FILE = 'token.txt';
+const DOCTOR_DETAILS_FILE = 'doctorDetails.json';
+const OUTPUT_FILE = 'response.json';
 
 // Function to read a file and return its content as a string
 function readFileSync(filePath) {
   try {
-    return fs.readFileSync(filePath, "utf8");
+    return fs.readFileSync(filePath, 'utf8');
   } catch (error) {
     console.error(`Error reading file ${filePath}: ${error.message}`);
     process.exit(1);
@@ -27,7 +27,7 @@ const doctorDetails = JSON.parse(readFileSync(DOCTOR_DETAILS_FILE));
 
 // Generate doctor URLs
 const doctorUrls = doctorDetails.map((doctor) => {
-  return `${API_BASE_URL}/doctors/${doctor.id}/addresses/${doctor.addressId}/slots?start=${FILTER_DATE_START}T00%3A00%3A00%2B01%3A00&end=${FILTER_DATE_END}T23%3A59%3A59%2B01%3A00`;
+  return `${API_BASE_URL}/doctors/${doctor.id}/addresses/${doctor.addressId}/slots?start=${FILTER_DATE_START}T00%3A00%3A00%2B01%3A00&end=${FILTER_DATE_END}T23%3A59%3A59%2B01%3A00&includingSaasOnlyCalendar=false&with%5B%5D=address.nearest_slot_after_end&with%5B%5D=links.book.patient&with%5B%5D=slot.doctor_id&with%5B%5D=slot.address_id&with%5B%5D=slot.address&with%5B%5D=slot.with_booked&filters%5Baddress_service_id%5D=3489765&preferredAddressServiceId=3489765`;
 });
 
 // Function to fetch slots for each doctor using built-in https
@@ -40,7 +40,7 @@ async function fetchDoctorSlots(urls) {
 
       const options = {
         headers: {
-          Accept: "application/json",
+          Accept: 'application/json',
           Authorization: `${AUTH_TOKEN}`,
         },
       };
@@ -48,15 +48,15 @@ async function fetchDoctorSlots(urls) {
       const response = await new Promise((resolve, reject) => {
         https
           .get(url, options, (res) => {
-            let data = "";
-            res.on("data", (chunk) => {
+            let data = '';
+            res.on('data', (chunk) => {
               data += chunk;
             });
-            res.on("end", () => {
+            res.on('end', () => {
               resolve(data);
             });
           })
-          .on("error", (err) => {
+          .on('error', (err) => {
             reject(err);
           });
       });
@@ -65,9 +65,7 @@ async function fetchDoctorSlots(urls) {
       const slots = parsedResponse._items || [];
       allSlots.push(...slots);
     } catch (error) {
-      console.error(
-        `Failed to fetch slots for URL: ${url}, Error: ${error.message}`
-      );
+      console.error(`Failed to fetch slots for URL: ${url}, Error: ${error.message}`);
     }
   }
 
@@ -77,7 +75,7 @@ async function fetchDoctorSlots(urls) {
 // Main function to run the logic
 async function main() {
   try {
-    console.log("Fetching doctor slots...");
+    console.log('Fetching doctor slots...');
     const slots = await fetchDoctorSlots(doctorUrls);
 
     const metadata = {
@@ -93,7 +91,7 @@ async function main() {
     console.log(`Writing results to ${OUTPUT_FILE}...`);
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(result, null, 2));
 
-    console.log("Done! Results saved to response.json.");
+    console.log('Done! Results saved to response.json.');
   } catch (error) {
     console.error(`An error occurred: ${error.message}`);
   }
