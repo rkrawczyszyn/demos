@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2024-12-30T11:56:23.163Z"
+    "updatedOn": "2024-12-30T12:00:08.844Z"
   },
   "slots": [
     {
@@ -4713,20 +4713,6 @@
       "address_id": 1027611,
       "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/374835/1027611/2025-01-03T18:00:00+01:00",
       "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/374835/addresses/1027611",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-06T08:00:00+01:00",
-      "doctor_id": 374835,
-      "address_id": 1027611,
-      "booking_url": null,
-      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
