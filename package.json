@@ -1,0 +1,14 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "description": "-   when you don't see an element, check it's position, display, z-index, height and width",
+  "main": "fetchSlots.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yahoo-finance2": "^2.13.3"
+  }
+}
