@@ -392,3 +392,8 @@ Fetching: https://www.znanylekarz.pl/api/v3/doctors/374835/addresses/1027611/slo
 Fetching: https://www.znanylekarz.pl/api/v3/doctors/302078/addresses/902740/slots?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00&includingSaasOnlyCalendar=false&with%5B%5D=address.nearest_slot_after_end&with%5B%5D=links.book.patient&with%5B%5D=slot.doctor_id&with%5B%5D=slot.address_id&with%5B%5D=slot.address&with%5B%5D=slot.with_booked
 Writing results to /home/rkrawczyszyn/demos/response.json...
 Done! Results saved to response.json.
+[main 1496e9f] updated at 2024-12-30 16:00:08
+ 2 files changed, 22 insertions(+), 31 deletions(-)
+To https://github.com/rkrawczyszyn/demos.git
+   9227920..1496e9f  main -> main
+Changes pushed with commit message: 'updated at 2024-12-30 16:00:08'
