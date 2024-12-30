@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2024-12-30T05:00:08.687Z"
+    "updatedOn": "2024-12-30T06:00:08.450Z"
   },
   "slots": [
     {
@@ -751,6 +751,20 @@
       "address_id": 982493,
       "booking_url": null,
       "booked": true,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/359103/addresses/982493",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2024-12-30T15:20:00+01:00",
+      "doctor_id": 359103,
+      "address_id": 982493,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/359103/982493/2024-12-30T15:20:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
