@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2024-12-30T17:00:12.191Z"
+    "updatedOn": "2024-12-30T18:00:09.061Z"
   },
   "slots": [
     {
@@ -3849,20 +3849,6 @@
       "_links": {
         "address": {
           "href": "/api/v3/doctors/348936/addresses/1031602",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2024-12-30T18:15:00+01:00",
-      "doctor_id": 333060,
-      "address_id": 950114,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/333060/addresses/950114",
           "method": "get"
         }
       }
