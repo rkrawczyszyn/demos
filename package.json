@@ -4,8 +4,7 @@
   "description": "-   when you don't see an element, check it's position, display, z-index, height and width",
   "main": "fetchSlots.js",
   "scripts": {
-    "build": "tsc",
-    "build2": "tsc && copyfiles -f src/*.js src/*.sh src/doctorDetails.json dist/"
+    "build": "tsc && copyfiles -f src/*.js src/*.sh src/doctorDetails.json dist/"
   },
   "author": "",
   "license": "ISC",
