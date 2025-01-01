@@ -14,23 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const yahoo_finance2_1 = __importDefault(require("yahoo-finance2"));
 const fs_1 = __importDefault(require("fs"));
-const findLocalMinima = (results) => {
-    const prices = results.map((data) => data.low);
-    const localMinima = [];
-    for (let i = 1; i < prices.length - 1; i++) {
-        if (prices[i] < prices[i - 1] && prices[i] < prices[i + 1]) {
-            localMinima.push(results[i]);
-        }
-    }
-    return localMinima;
-};
 const processStock = (stockInput) => __awaiter(void 0, void 0, void 0, function* () {
     const period2 = new Date();
     const now = new Date();
     const period1 = now;
     // 3 months ago
     period1.setDate(period1.getDate() - 90);
-    const results = [];
     const apiResults = yield yahoo_finance2_1.default.historical(stockInput.code, {
         period1,
         period2,
@@ -38,50 +27,51 @@ const processStock = (stockInput) => __awaiter(void 0, void 0, void 0, function*
     const closePrices = apiResults.map((result) => result.close);
     const absoluteMin = Math.min(...closePrices);
     const absoluteMax = Math.max(...closePrices);
-    const localMinimas = findLocalMinima(apiResults)
-        .sort((a, b) => a.low - b.low)
-        .slice(0, 3);
     const singleResult = {
         stockCode: stockInput.code,
         stockName: stockInput.name,
-        localMinimas,
         absoluteMin,
         absoluteMax,
         currentPrice: apiResults[apiResults.length - 1].close,
         periodStart: period1.toLocaleDateString(),
         periodEnd: period2.toLocaleDateString(),
+        attractivePriceMax: -1,
+        attractivePriceMin: -1,
+        url: '',
     };
-    console.log(`show pushing result
-        ${JSON.stringify(singleResult)},
-    `);
     return singleResult;
 });
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const stocks = [
-        { code: 'MSFT', name: 'Microsoft' },
-        { code: 'GOOG', name: 'Google' },
-        { code: 'AAPL', name: 'Apple' },
-        { code: 'NVDA', name: 'Nvidia' },
-        { code: 'TSLA', name: 'Tesla' },
-        { code: 'AMZN', name: 'Amazon' },
-        { code: 'KO', name: 'Coca-Cola' },
-        { code: 'O', name: 'Reality Income' },
-        { code: 'MCD', name: "McDonald's" },
-        { code: 'JNJ', name: 'Johnson & Johnson' },
-        { code: 'SBUX', name: 'Starbucks' },
-        { code: 'PEP', name: 'PepsiCo' },
-        { code: 'CVX', name: 'Chevron' },
-        { code: 'CSCO', name: 'Cisco' },
-        { code: 'INTC', name: 'Intel' },
-        { code: 'NFLX', name: 'Netflix' },
+        {
+            code: 'SBUX',
+            name: 'Starbucks',
+            attractivePriceMin: 83,
+            attractivePriceMax: 77,
+            url: 'https://www.trading212.com/pl/trading-instruments/invest/SBUX.US',
+        },
+        {
+            code: 'IUSQ.DE',
+            name: 'IShares MSCI ACWI (Acc)',
+            attractivePriceMin: 84.5,
+            attractivePriceMax: 80,
+            url: 'https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE',
+        },
     ];
-    const results = yield Promise.all(stocks.map(processStock));
-    fs_1.default.writeFile('stock-results.json', JSON.stringify(results, null, 2), (err) => {
+    let results = yield Promise.all(stocks.map(processStock));
+    results = results.map((x) => {
+        const stockDetail = stocks.find((s) => s.code === x.stockCode);
+        if (!stockDetail) {
+            return x;
+        }
+        return Object.assign(Object.assign({}, x), { attractivePriceMax: stockDetail.attractivePriceMax, attractivePriceMin: stockDetail.attractivePriceMin, url: stockDetail.url });
+    });
+    fs_1.default.writeFile('custom-stock-watch-results.json', JSON.stringify(results, null, 2), (err) => {
         if (err) {
             console.error('Error writing to file', err);
         }
         else {
-            console.log('Stock results written to stock-results.json');
+            console.log('Stock results written to custom-stock-watch-results.json');
         }
     });
 });
