@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 cd /home/rkrawczyszyn/demos/dist || exit 1
 
