@@ -15,3 +15,5 @@ chmod +x fetchSlots.js
 chmod +x gitUpdate.sh
 chmod +x refreshToken.js
 chmod +x yahoo.js
+
+dos2unix /home/rkrawczyszyn/demos/dist/gitUpdate.sh
