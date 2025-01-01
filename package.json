@@ -4,11 +4,17 @@
   "description": "-   when you don't see an element, check it's position, display, z-index, height and width",
   "main": "fetchSlots.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build2": "tsc && copyfiles -f src/*.js src/*.sh src/doctorDetails.json dist/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "yahoo-finance2": "^2.13.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.3",
+    "copyfiles": "^2.4.1",
+    "typescript": "^4.0.0"
   }
 }
