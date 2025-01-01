@@ -120,7 +120,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
             name: 'Stellar',
             attractivePriceMin: 0.5,
             attractivePriceMax: 0.3,
-            url: 'stellar',
+            url: 'https://www.coingecko.com/pl/waluty/stellar',
             type: ShareType.Coin,
         },
     ];
