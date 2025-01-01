@@ -31,11 +31,6 @@ const processStock = (stockInput) => __awaiter(void 0, void 0, void 0, function*
     // 3 months ago
     period1.setDate(period1.getDate() - 90);
     const results = [];
-    console.log(`show
-      start ${period1},
-      end ${period2},
-      stockInput.code ${stockInput.code},
-    `);
     const apiResults = yield yahoo_finance2_1.default.historical(stockInput.code, {
         period1,
         period2,

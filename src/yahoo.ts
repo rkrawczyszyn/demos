@@ -50,12 +50,6 @@ const processStock = async (stockInput: StockInput) => {
 
   const results: StockAnalysisResult[] = [];
 
-  console.log(`show
-      start ${period1},
-      end ${period2},
-      stockInput.code ${stockInput.code},
-    `);
-
   const apiResults: StockData[] = await yahooFinance.historical(stockInput.code, {
     period1,
     period2,

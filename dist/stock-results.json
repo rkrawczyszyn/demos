@@ -34,8 +34,8 @@
     "absoluteMin": 406.3500061035156,
     "absoluteMax": 454.4599914550781,
     "currentPrice": 421.5,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "GOOG",
@@ -72,8 +72,8 @@
     "absoluteMin": 163.05999755859375,
     "absoluteMax": 198.16000366210938,
     "currentPrice": 190.44000244140625,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "AAPL",
@@ -110,8 +110,8 @@
     "absoluteMin": 221.69000244140625,
     "absoluteMax": 259.0199890136719,
     "currentPrice": 250.4199981689453,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "NVDA",
@@ -148,8 +148,8 @@
     "absoluteMin": 122.8499984741211,
     "absoluteMax": 148.8800048828125,
     "currentPrice": 134.2899932861328,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "TSLA",
@@ -186,8 +186,8 @@
     "absoluteMin": 213.64999389648438,
     "absoluteMax": 479.8599853515625,
     "currentPrice": 403.8399963378906,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "AMZN",
@@ -224,8 +224,8 @@
     "absoluteMin": 180.8000030517578,
     "absoluteMax": 232.92999267578125,
     "currentPrice": 219.38999938964844,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "KO",
@@ -262,8 +262,8 @@
     "absoluteMin": 61.7400016784668,
     "absoluteMax": 70.56999969482422,
     "currentPrice": 62.2599983215332,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "O",
@@ -300,8 +300,8 @@
     "absoluteMin": 51.7599983215332,
     "absoluteMax": 64.70999908447266,
     "currentPrice": 53.40999984741211,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "MCD",
@@ -338,8 +338,8 @@
     "absoluteMin": 288.4700012207031,
     "absoluteMax": 316.55999755859375,
     "currentPrice": 289.8900146484375,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "JNJ",
@@ -376,8 +376,8 @@
     "absoluteMin": 143.33999633789062,
     "absoluteMax": 165.86000061035156,
     "currentPrice": 144.6199951171875,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "SBUX",
@@ -414,8 +414,8 @@
     "absoluteMin": 87.44000244140625,
     "absoluteMax": 102.5,
     "currentPrice": 91.25,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "PEP",
@@ -452,8 +452,8 @@
     "absoluteMin": 151.2899932861328,
     "absoluteMax": 176.10000610351562,
     "currentPrice": 152.05999755859375,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "CVX",
@@ -490,8 +490,8 @@
     "absoluteMin": 141.14999389648438,
     "absoluteMax": 162.52999877929688,
     "currentPrice": 144.83999633789062,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "CSCO",
@@ -528,8 +528,8 @@
     "absoluteMin": 52.43000030517578,
     "absoluteMax": 60.02000045776367,
     "currentPrice": 59.20000076293945,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "INTC",
@@ -566,8 +566,8 @@
     "absoluteMin": 19.059999465942383,
     "absoluteMax": 26.229999542236328,
     "currentPrice": 20.049999237060547,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   },
   {
     "stockCode": "NFLX",
@@ -604,7 +604,7 @@
     "absoluteMin": 687.6500244140625,
     "absoluteMax": 936.5599975585938,
     "currentPrice": 891.3200073242188,
-    "periodStart": "03/10/2024",
-    "periodEnd": "01/01/2025"
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025"
   }
 ]

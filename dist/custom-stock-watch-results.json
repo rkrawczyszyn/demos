@@ -1,0 +1,41 @@
+[
+  {
+    "stockCode": "SBUX",
+    "stockName": "Starbucks",
+    "absoluteMin": 87.44000244140625,
+    "absoluteMax": 102.5,
+    "currentPrice": 91.25,
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025",
+    "attractivePriceMax": 77,
+    "attractivePriceMin": 83,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/SBUX.US",
+    "type": 0
+  },
+  {
+    "stockCode": "IUSQ.DE",
+    "stockName": "IShares MSCI ACWI (Acc)",
+    "absoluteMin": 80.5999984741211,
+    "absoluteMax": 87.61000061035156,
+    "currentPrice": 85.4000015258789,
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025",
+    "attractivePriceMax": 80,
+    "attractivePriceMin": 84.5,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE",
+    "type": 0
+  },
+  {
+    "stockCode": "stellar",
+    "stockName": "Stellar",
+    "absoluteMin": 0.34807148365299395,
+    "absoluteMax": 2.52617307383504,
+    "currentPrice": 1.7616862315467705,
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025",
+    "attractivePriceMin": 0.5,
+    "attractivePriceMax": 0.3,
+    "url": "stellar",
+    "type": 1
+  }
+]
