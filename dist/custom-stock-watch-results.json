@@ -9,7 +9,8 @@
     "periodEnd": "1.01.2025",
     "attractivePriceMax": 77,
     "attractivePriceMin": 83,
-    "url": "https://www.trading212.com/pl/trading-instruments/invest/SBUX.US"
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/SBUX.US",
+    "type": 0
   },
   {
     "stockCode": "IUSQ.DE",
@@ -21,6 +22,20 @@
     "periodEnd": "1.01.2025",
     "attractivePriceMax": 80,
     "attractivePriceMin": 84.5,
-    "url": "https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE"
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE",
+    "type": 0
+  },
+  {
+    "stockCode": "stellar",
+    "stockName": "Stellar",
+    "absoluteMin": 0.34807148365299395,
+    "absoluteMax": 2.52617307383504,
+    "currentPrice": 1.7616862315467705,
+    "periodStart": "3.10.2024",
+    "periodEnd": "1.01.2025",
+    "attractivePriceMin": 0.5,
+    "attractivePriceMax": 0.3,
+    "url": "stellar",
+    "type": 1
   }
 ]
