@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-01T18:03:08.460Z"
+    "updatedOn": "2025-01-01T18:04:07.458Z"
   },
   "slots": [
     {
@@ -3060,20 +3060,6 @@
       "doctor_id": 359103,
       "address_id": 982493,
       "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/359103/982493/2025-01-03T07:50:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/359103/addresses/982493",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-03T08:40:00+01:00",
-      "doctor_id": 359103,
-      "address_id": 982493,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/359103/982493/2025-01-03T08:40:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
