@@ -245,13 +245,12 @@ const main = async () => {
 
   const combined = [...stockResults, ...coinResults];
 
-  fs.writeFile('custom-stock-watch-results.json', JSON.stringify(combined, null, 2), (err) => {
-    if (err) {
-      console.error('Error writing to file', err);
-    } else {
-      console.log('Stock results written to custom-stock-crypto-watch-results.json');
-    }
-  });
+  try {
+    fs.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2))  
+    console.log('Stock results written to custom-stock-crypto-watch-results.json');
+  } catch (error) {
+    console.error('Error writing to file', error);
+  }
 };
 
 main();

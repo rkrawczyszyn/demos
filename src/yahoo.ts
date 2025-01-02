@@ -103,13 +103,12 @@ const main = async () => {
 
   const results = await Promise.all(stocks.map(processStock));
 
-  fs.writeFile('stock-results.json', JSON.stringify(results, null, 2), (err) => {
-    if (err) {
-      console.error('Error writing to file', err);
-    } else {
-      console.log('Stock results written to stock-results.json');
-    }
-  });
+  try {
+    fs.writeFileSync('stock-results.json', JSON.stringify(results, null, 2));
+    console.log('Stock results written to stock-results.json');
+  } catch (error) {
+    console.error('Error writing to file', error);
+  }
 };
 
 main();
