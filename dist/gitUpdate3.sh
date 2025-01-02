@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Load credentials from gitCredentials.txt
-if [ -f /home/rkrawczyszyn/demos/gitCredentials.txt ]; then
-  source /home/rkrawczyszyn/demos/gitCredentials.txt
+if [ -f /home/rkrawczyszyn/demos/dist/gitCredentials.txt ]; then
+  source /home/rkrawczyszyn/demos/dist/gitCredentials.txt
 else
   echo "Error: gitCredentials.txt file not found."
   exit 1
