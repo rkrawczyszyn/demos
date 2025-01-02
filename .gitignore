@@ -25,4 +25,3 @@ yarn-error.log*
 *.log
 /dist/cron.log
 /dist/token.txt
-/dist/gitCredentials.txt
