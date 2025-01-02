@@ -26,8 +26,12 @@ function fetchAccessToken() {
 
           const tokenString = `Bearer ${accessToken}`;
 
-          fs.writeFileSync(tokenFilePath, tokenString, 'utf8');
-          console.log('ACCESS_TOKEN written to token.txt');
+          try {
+            fs.writeFileSync(tokenFilePath, tokenString, 'utf8');
+            console.log('ACCESS_TOKEN written to token.txt');
+          } catch (error) {
+            console.error('Error writing to file', error);
+          }
         } else {
           console.log('ACCESS_TOKEN not found in the page content');
         }

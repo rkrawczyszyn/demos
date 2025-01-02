@@ -175,13 +175,12 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         return Object.assign(Object.assign({}, x), { attractivePriceMax: coinDetail.attractivePriceMax, attractivePriceMin: coinDetail.attractivePriceMin, url: coinDetail.url, type: coinDetail.type });
     });
     const combined = [...stockResults, ...coinResults];
-    fs_1.default.writeFile('custom-stock-watch-results.json', JSON.stringify(combined, null, 2), (err) => {
-        if (err) {
-            console.error('Error writing to file', err);
-        }
-        else {
-            console.log('Stock results written to custom-stock-crypto-watch-results.json');
-        }
-    });
+    try {
+        fs_1.default.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2));
+        console.log('Stock results written to custom-stock-crypto-watch-results.json');
+    }
+    catch (error) {
+        console.error('Error writing to file', error);
+    }
 });
 main();

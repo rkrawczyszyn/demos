@@ -76,13 +76,12 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         { code: 'NFLX', name: 'Netflix' },
     ];
     const results = yield Promise.all(stocks.map(processStock));
-    fs_1.default.writeFile('stock-results.json', JSON.stringify(results, null, 2), (err) => {
-        if (err) {
-            console.error('Error writing to file', err);
-        }
-        else {
-            console.log('Stock results written to stock-results.json');
-        }
-    });
+    try {
+        fs_1.default.writeFileSync('stock-results.json', JSON.stringify(results, null, 2));
+        console.log('Stock results written to stock-results.json');
+    }
+    catch (error) {
+        console.error('Error writing to file', error);
+    }
 });
 main();
