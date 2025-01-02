@@ -95,17 +95,29 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
     };
     return singleResult;
 });
+const calculateSafeDelay = (numRequests, maxRequestsPerMinute = 5) => {
+    const delayPerRequest = Math.ceil(60 / maxRequestsPerMinute);
+    const totalDelay = numRequests * delayPerRequest;
+    return delayPerRequest * 1000;
+};
 function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
+        const safeDelayTime = calculateSafeDelay(coins.length);
+        console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
         const results = [];
         for (const coin of coins) {
-            const result = yield processCoin(coin);
-            results.push(result);
-            console.log('processed OK coin symbol ', coin.code);
-            yield delay(3000);
+            try {
+                const result = yield processCoin(coin);
+                results.push(result);
+                console.log(`Processed OK coin: ${coin.code}`);
+            }
+            catch (error) {
+                console.error(`Error processing coin: ${coin.code}`, error);
+            }
+            yield delay(safeDelayTime);
         }
         return results;
     });
