@@ -154,7 +154,8 @@ function delay(ms: number) {
 }
 
 async function processCoinsSequentially(coins: any[]) {
-  const safeDelayTime = calculateSafeDelay(coins.length);
+  // const safeDelayTime = calculateSafeDelay(coins.length);
+  const safeDelayTime = 5000;
   console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
 
   const results = [];
