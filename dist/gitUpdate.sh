@@ -12,6 +12,6 @@ git add .
 git commit -m "updated at $DATE"
 
 # Push the changes to the remote repository
-git push https://$GIT_USERNAME:$GIT_TOKEN@github.com/rkrawczyszyn/demos.git
+git push https://$GIT_USERNAME:$GIT_TOKEN@github.com/rkrawczyszyn/demos.git main
 
 echo "Changes pushed with commit message: 'updated at $DATE'"
