@@ -124,14 +124,6 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
             type: ShareType.Coin,
         },
         {
-            code: 'hedera',
-            name: 'Hedera (HBAR)',
-            attractivePriceMin: 1.13,
-            attractivePriceMax: 1.08,
-            url: 'https://www.binance.com/pl/price/hedera',
-            type: ShareType.Coin,
-        },
-        {
             code: 'polygon-ecosystem-token',
             name: 'POL (ex-MATIC) (POL)',
             attractivePriceMin: 1.9,
