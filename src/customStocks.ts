@@ -172,6 +172,46 @@ const main = async () => {
       url: 'https://www.coingecko.com/pl/waluty/stellar',
       type: ShareType.Coin,
     },
+    {
+      code: 'hedera',
+      name: 'Hedera (HBAR)',
+      attractivePriceMin: 1.13,
+      attractivePriceMax: 1.08,
+      url: 'https://www.binance.com/pl/price/hedera',
+      type: ShareType.Coin,
+    },
+    {
+      code: 'polygon-ecosystem-token',
+      name: 'POL (ex-MATIC) (POL)',
+      attractivePriceMin: 1.9,
+      attractivePriceMax: 1.8,
+      url: 'https://www.binance.com/pl/price/polygon-ecosystem-token',
+      type: ShareType.Coin,
+    },
+    {
+      code: 'eos',
+      name: 'EOS (EOS)',
+      attractivePriceMin: 3.25,
+      attractivePriceMax: 3.13,
+      url: 'https://www.binance.com/pl/price/eos',
+      type: ShareType.Coin,
+    },
+    {
+      code: 'stepn',
+      name: 'GMT',
+      attractivePriceMin: 0.62,
+      attractivePriceMax: 0.61,
+      url: 'https://www.binance.com/pl/price/green-metaverse-token',
+      type: ShareType.Coin,
+    },
+    {
+      code: 'book-of-meme',
+      name: 'BOOK OF MEME (BOME)',
+      attractivePriceMin: 0.0267,
+      attractivePriceMax: 0.025,
+      url: 'https://www.binance.com/pl/price/book-of-meme',
+      type: ShareType.Coin,
+    },
   ];
 
   let stockResults = await Promise.all(stocks.map(processStock));
