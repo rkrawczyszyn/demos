@@ -116,6 +116,8 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
   const response = await fetchCoinData(coinInput.code);
 
+  console.log('show response', response);
+
   const apiResults: CryptoData[] = response.prices.map((price: [number, number]) => ({
     date: new Date(price[0]),
     price: price[1],
@@ -142,6 +144,20 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
   return singleResult;
 };
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function processCoinsSequentially(coins: any[]) {
+  const results = [];
+  for (const coin of coins) {
+    const result = await processCoin(coin); // Process one coin
+    results.push(result);
+    await delay(3000); // Wait for 3 seconds
+  }
+  return results;
+}
 
 const main = async () => {
   const stocks = [
@@ -207,7 +223,9 @@ const main = async () => {
   ];
 
   let stockResults = await Promise.all(stocks.map(processStock));
-  let coinResults = await Promise.all(coins.map(processCoin));
+  // let coinResults = await Promise.all(coins.map(processCoin));
+
+  let coinResults = await processCoinsSequentially(coins);
 
   // extend stocks
   stockResults = stockResults.map((x) => {
@@ -246,7 +264,7 @@ const main = async () => {
   const combined = [...stockResults, ...coinResults];
 
   try {
-    fs.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2))  
+    fs.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2));
     console.log('Stock results written to custom-stock-crypto-watch-results.json');
   } catch (error) {
     console.error('Error writing to file', error);

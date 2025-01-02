@@ -73,6 +73,7 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
     // 3 months ago
     period1.setDate(period1.getDate() - 90);
     const response = yield fetchCoinData(coinInput.code);
+    console.log('show response', response);
     const apiResults = response.prices.map((price) => ({
         date: new Date(price[0]),
         price: price[1],
@@ -95,6 +96,20 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
     };
     return singleResult;
 });
+function delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+function processCoinsSequentially(coins) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const results = [];
+        for (const coin of coins) {
+            const result = yield processCoin(coin); // Process one coin
+            results.push(result);
+            yield delay(3000); // Wait for 3 seconds
+        }
+        return results;
+    });
+}
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const stocks = [
         {
@@ -157,7 +172,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         },
     ];
     let stockResults = yield Promise.all(stocks.map(processStock));
-    let coinResults = yield Promise.all(coins.map(processCoin));
+    // let coinResults = await Promise.all(coins.map(processCoin));
+    let coinResults = yield processCoinsSequentially(coins);
     // extend stocks
     stockResults = stockResults.map((x) => {
         const stockDetail = stocks.find((s) => s.code === x.stockCode);
