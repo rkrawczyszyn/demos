@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-02T09:36:17.156Z"
+    "updatedOn": "2025-01-02T09:37:08.203Z"
   },
   "slots": [
     {
@@ -17045,8 +17045,8 @@
       "start": "2025-01-13T18:15:00+01:00",
       "doctor_id": 333060,
       "address_id": 950114,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/333060/950114/2025-01-13T18:15:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
