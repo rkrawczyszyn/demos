@@ -73,7 +73,6 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
     // 3 months ago
     period1.setDate(period1.getDate() - 90);
     const response = yield fetchCoinData(coinInput.code);
-    console.log('show response', response);
     const apiResults = response.prices.map((price) => ({
         date: new Date(price[0]),
         price: price[1],
@@ -103,9 +102,10 @@ function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
         const results = [];
         for (const coin of coins) {
-            const result = yield processCoin(coin); // Process one coin
+            const result = yield processCoin(coin);
             results.push(result);
-            yield delay(3000); // Wait for 3 seconds
+            console.log('processed OK coin symbol ', coin.code);
+            yield delay(3000);
         }
         return results;
     });
