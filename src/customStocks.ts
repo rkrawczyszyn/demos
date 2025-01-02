@@ -116,8 +116,6 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
   const response = await fetchCoinData(coinInput.code);
 
-  console.log('show response', response);
-
   const apiResults: CryptoData[] = response.prices.map((price: [number, number]) => ({
     date: new Date(price[0]),
     price: price[1],
@@ -152,10 +150,12 @@ function delay(ms: number) {
 async function processCoinsSequentially(coins: any[]) {
   const results = [];
   for (const coin of coins) {
-    const result = await processCoin(coin); // Process one coin
+    const result = await processCoin(coin);
     results.push(result);
-    await delay(3000); // Wait for 3 seconds
+    console.log('processed OK coin symbol ', coin.code);
+    await delay(3000);
   }
+
   return results;
 }
 
