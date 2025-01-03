@@ -1,5 +1,8 @@
 import yahooFinance from 'yahoo-finance2';
 import fs from 'fs';
+import path from 'path';
+
+const OUTPUT_FILE = path.resolve(__dirname, 'stock-results.json');
 
 export interface StockData {
   date: Date;
@@ -104,8 +107,8 @@ const main = async () => {
   const results = await Promise.all(stocks.map(processStock));
 
   try {
-    fs.writeFileSync('stock-results.json', JSON.stringify(results, null, 2));
-    console.log('Stock results written to stock-results.json');
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+    console.log(`Stock results written to ${OUTPUT_FILE}`);
   } catch (error) {
     console.error('Error writing to file', error);
   }

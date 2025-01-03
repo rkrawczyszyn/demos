@@ -1,6 +1,9 @@
 import yahooFinance from 'yahoo-finance2';
 import fs from 'fs';
 import https from 'https';
+import path from 'path';
+
+const OUTPUT_FILE = path.resolve(__dirname, 'custom-stock-watch-results.json');
 
 export interface StockData {
   date: Date;
@@ -154,8 +157,8 @@ function delay(ms: number) {
 }
 
 async function processCoinsSequentially(coins: any[]) {
-  // const safeDelayTime = calculateSafeDelay(coins.length);
-  const safeDelayTime = 5000;
+  const safeDelayTime = calculateSafeDelay(coins.length);
+  // const safeDelayTime = 5000;
   console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
 
   const results = [];
@@ -164,7 +167,7 @@ async function processCoinsSequentially(coins: any[]) {
     try {
       const result = await processCoin(coin);
       results.push(result);
-      console.log(`Processed OK coin: ${coin.code}`);
+      console.log(`Processed OK coin: ${coin.code} ${result.currentPrice}`);
     } catch (error) {
       console.error(`Error processing coin: ${coin.code}`, error);
     }
@@ -279,8 +282,8 @@ const main = async () => {
   const combined = [...stockResults, ...coinResults];
 
   try {
-    fs.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2));
-    console.log('Stock results written to custom-stock-crypto-watch-results.json');
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(combined, null, 2));
+    console.log(`Stock results written to ${OUTPUT_FILE}`);
   } catch (error) {
     console.error('Error writing to file', error);
   }
