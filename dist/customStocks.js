@@ -105,15 +105,15 @@ function delay(ms) {
 }
 function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
-        // const safeDelayTime = calculateSafeDelay(coins.length);
-        const safeDelayTime = 5000;
+        const safeDelayTime = calculateSafeDelay(coins.length);
+        // const safeDelayTime = 5000;
         console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
         const results = [];
         for (const coin of coins) {
             try {
                 const result = yield processCoin(coin);
                 results.push(result);
-                console.log(`Processed OK coin: ${coin.code}`);
+                console.log(`Processed OK coin: ${coin.code} ${result.currentPrice}`);
             }
             catch (error) {
                 console.error(`Error processing coin: ${coin.code}`, error);
