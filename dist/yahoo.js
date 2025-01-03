@@ -14,6 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const yahoo_finance2_1 = __importDefault(require("yahoo-finance2"));
 const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
+const OUTPUT_FILE = path_1.default.resolve(__dirname, 'stock-results.json');
 const findLocalMinima = (results) => {
     const prices = results.map((data) => data.low);
     const localMinima = [];
@@ -77,8 +79,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     ];
     const results = yield Promise.all(stocks.map(processStock));
     try {
-        fs_1.default.writeFileSync('stock-results.json', JSON.stringify(results, null, 2));
-        console.log('Stock results written to stock-results.json');
+        fs_1.default.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+        console.log(`Stock results written to ${OUTPUT_FILE}`);
     }
     catch (error) {
         console.error('Error writing to file', error);
