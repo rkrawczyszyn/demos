@@ -15,6 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const yahoo_finance2_1 = __importDefault(require("yahoo-finance2"));
 const fs_1 = __importDefault(require("fs"));
 const https_1 = __importDefault(require("https"));
+const path_1 = __importDefault(require("path"));
+const OUTPUT_FILE = path_1.default.resolve(__dirname, 'custom-stock-watch-results.json');
 var ShareType;
 (function (ShareType) {
     ShareType[ShareType["Stock"] = 0] = "Stock";
@@ -205,8 +207,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     });
     const combined = [...stockResults, ...coinResults];
     try {
-        fs_1.default.writeFileSync('custom-stock-watch-results.json', JSON.stringify(combined, null, 2));
-        console.log('Stock results written to custom-stock-crypto-watch-results.json');
+        fs_1.default.writeFileSync(OUTPUT_FILE, JSON.stringify(combined, null, 2));
+        console.log(`Stock results written to ${OUTPUT_FILE}`);
     }
     catch (error) {
         console.error('Error writing to file', error);
