@@ -18,7 +18,7 @@ const https_1 = __importDefault(require("https"));
 const path_1 = __importDefault(require("path"));
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'custom-stock-watch-results.json');
 const CUSTOM_STOCKS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customStocksWatch.json';
-const CUSTOM_COINS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customCoinsWatch.json.json';
+const CUSTOM_COINS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customCoinsWatch.json';
 var ShareType;
 (function (ShareType) {
     ShareType[ShareType["Stock"] = 0] = "Stock";
