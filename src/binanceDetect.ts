@@ -1,89 +1,108 @@
+// Import required modules
 import axios from 'axios';
-import fs from 'fs';
+import * as fs from 'fs';
+import * as crypto from 'crypto';
 import path from 'path';
+import nodemailer from 'nodemailer';
 
-// Binance REST API URL to fetch all available pairs
-const exchangeInfoUrl: string = 'https://api.binance.com/api/v3/exchangeInfo';
+// Binance API key and secret
+const apiKey: string = '';
+const apiSecret: string = '';
+const OUTPUT_FILE = path.resolve(__dirname, 'coinStorage.json');
 
-// Path to store the data in a JSON file
-const storageFilePath = path.join(__dirname, 'newTokens.json');
+// Build the request
+const baseUrl: string = 'https://api.binance.com/sapi/v1/capital/config/getall';
+const timestamp: number = new Date().getTime();
+const queryString: string = `timestamp=${timestamp}`;
+const signature: string = crypto.createHmac('sha256', apiSecret).update(queryString).digest('hex');
+const url: string = `${baseUrl}?${queryString}&signature=${signature}`;
 
-// Define the structure for the stored data
-interface Metadata {
-  createdOn: Date;
-  updatedOn: Date;
-}
+// Options for axios
+const config = {
+  headers: {
+    'X-MBX-APIKEY': apiKey,
+  },
+};
 
-interface TokenStorage {
-  metadata: Metadata;
-  newTokens: string[];
-}
-
-// Function to load the storage file if it exists, otherwise initialize a new one
-function loadStorage(): TokenStorage {
+// Function to read coin storage from file
+function readCoinStorage() {
   try {
-    const fileData = fs.readFileSync(storageFilePath, 'utf8');
-    return JSON.parse(fileData) as TokenStorage;
+    const data = fs.readFileSync(OUTPUT_FILE, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
-    console.log('Storage file not found, initializing new storage.');
-    return {
-      metadata: {
-        createdOn: new Date(),
-        updatedOn: new Date(),
+    return [];
+  }
+}
+
+// Function to write coin storage to file
+function writeCoinStorage(coins: string[]) {
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(coins, null, 2), 'utf8');
+  console.log(`Updated ${OUTPUT_FILE}`);
+}
+
+// Function to send email
+async function sendEmail(newCoins: any[]) {
+  try {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.wp.pl',
+      port: 465,
+      secure: true,
+      auth: {
+        user: '',
+        pass: '',
       },
-      newTokens: [],
+    });
+
+    const message = {
+      from: 'robert-kowaliszyn@wp.pl',
+      to: 'rkrawczyszyn@gmail.com',
+      subject: 'Binance new coin found',
+      text: `New coins detected:\n\n${JSON.stringify(newCoins, null, 2)}`,
     };
-  }
-}
 
-// Function to save the storage data back to the file
-function saveStorage(storage: TokenStorage): void {
-  try {
-    fs.writeFileSync(storageFilePath, JSON.stringify(storage, null, 2), 'utf8');
-    console.log('Storage data saved successfully.');
+    await transporter.sendMail(message);
+    console.log('Email sent to rkrawczyszyn@gmail.com');
   } catch (error) {
-    console.error('Error saving storage data:', error);
+    console.error('Failed to send email:', error);
   }
 }
 
-// Function to fetch all available trading pairs from Binance
-async function fetchAllPairs(): Promise<Set<string>> {
+// Main function to process coins
+async function processCoins() {
   try {
-    const response = await axios.get(exchangeInfoUrl);
-    const symbols = response.data.symbols;
-    const tradingPairs = symbols.filter((symbol: any) => symbol.status === 'TRADING');
-    return new Set(tradingPairs.map((pair: any) => pair.symbol));
-  } catch (error) {
-    console.error('Error fetching trading pairs:', error);
-    return new Set();
-  }
-}
+    // Read existing coins from storage
+    const storedCoins = readCoinStorage();
 
-// Function to detect and store new tokens
-async function detectNewTokens() {
-  // Load current known tokens from storage
-  const storage = loadStorage();
-  const knownTokens = new Set(storage.newTokens);
+    // Fetch new coin data
+    const response = await axios.get(url, config);
+    const fetchedCoins: any[] = response.data;
 
-  // Fetch all active trading pairs
-  const allPairs = await fetchAllPairs();
+    // Extract coin names
+    const fetchedCoinNames: string[] = fetchedCoins.map((asset: any) => asset.coin);
 
-  // Detect new pairs
-  allPairs.forEach((symbol) => {
-    if (!knownTokens.has(symbol)) {
-      console.log(`New trading pair detected: ${symbol}`);
-      knownTokens.add(symbol);
-      storage.newTokens.push(symbol);
+    // Find new coins not in storage
+    const newCoins = fetchedCoins.filter((coin) => !storedCoins.includes(coin.coin));
+
+    // Log new coins to console and send email
+    if (newCoins.length > 0) {
+      console.log(
+        'New coins detected:',
+        newCoins.map((coin) => coin.coin)
+      );
+
+      // Send email with new coins and fetched data
+      await sendEmail(newCoins);
+
+      // Update coin storage with new coins and write to file
+      const updatedCoins = [...storedCoins, ...newCoins.map((coin) => coin.coin)];
+      writeCoinStorage(updatedCoins);
+    } else {
+      console.log('No new coins found.');
     }
-  });
-
-  // Update metadata and save the storage
-  storage.metadata.updatedOn = new Date();
-  saveStorage(storage);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-// Run the detection periodically (e.g., every 30 minutes)
-setInterval(detectNewTokens, 30 * 60 * 1000); // Run every 30 minutes
-
-// Run once immediately to detect and store any new tokens
-detectNewTokens();
+// Run the process
+processCoins();

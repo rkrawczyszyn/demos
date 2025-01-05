@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/nodemailer": "^6.4.17",
     "axios": "^1.7.9",
+    "nodemailer": "^6.9.16",
     "ws": "^8.18.0",
     "yahoo-finance2": "^2.13.3"
   },
