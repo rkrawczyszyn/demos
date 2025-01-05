@@ -52,9 +52,10 @@ const fetchCoinData = (coinCode) => {
     });
 };
 const getPercentageProgressToAttractivePriceStart = (coinDetails) => {
-    return (((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
-        (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
-        100);
+    return (100 -
+        ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
+            (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
+            100);
 };
 const readStocksCoinsConfigData = () => {
     try {
