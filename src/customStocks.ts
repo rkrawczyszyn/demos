@@ -4,8 +4,8 @@ import https from 'https';
 import path from 'path';
 
 const OUTPUT_FILE = path.resolve(__dirname, 'custom-stock-watch-results.json');
-const CUSTOM_STOCKS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customStocksWatch.json';
-const CUSTOM_COINS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customCoinsWatch.json';
+const CUSTOM_STOCKS_WATCH_FILE_PATH = path.resolve(__dirname, 'customStocksWatch.json');
+const CUSTOM_COINS_WATCH_FILE_PATH = path.resolve(__dirname, 'customCoinsWatch.json');
 
 export interface StockData {
   date: Date;
