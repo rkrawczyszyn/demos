@@ -6,21 +6,17 @@
 
 scp -r C:\Projects\demos\dist\* rkrawczyszyn@192.168.100.18:/home/rkrawczyszyn/demos/dist
 
-1. yarn build
-2. git pull
-3. applyPermissions.sh
+local PC:
 
-chmod +x /home/rkrawczyszyn/demos/dist/fetchSlots.js && \
-chmod +x /home/rkrawczyszyn/demos/dist/customStocks.js && \
-chmod +x /home/rkrawczyszyn/demos/dist/gitUpdate.sh && \
-chmod +x /home/rkrawczyszyn/demos/dist/refreshToken.js && \
-chmod +x /home/rkrawczyszyn/demos/dist/yahoo.js && \
-chmod +x customStocks.js && \
-chmod +x fetchSlots.js && \
-chmod +x gitUpdate.sh && \
-chmod +x refreshToken.js && \
-chmod +x yahoo.js && \
-dos2unix /home/rkrawczyszyn/demos/dist/gitUpdate.sh
+1. yarn build
+2. git push
+3. git pull
+
+RPI: 4. applyPermissions.sh
+
+chmod +x /home/rkrawczyszyn/demos/dist/applyPermissions.sh && \
+dos2unix /home/rkrawczyszyn/demos/dist/applyPermissions.sh && \
+/home/rkrawczyszyn/demos/dist/applyPermissions.sh
 
 4. install crontab
    crontab /home/rkrawczyszyn/demos/crontabConfig.txt
