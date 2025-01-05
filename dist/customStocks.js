@@ -16,6 +16,7 @@ const yahoo_finance2_1 = __importDefault(require("yahoo-finance2"));
 const fs_1 = __importDefault(require("fs"));
 const https_1 = __importDefault(require("https"));
 const path_1 = __importDefault(require("path"));
+const logDate_1 = require("./utils/logDate");
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'custom-stock-watch-results.json');
 const CUSTOM_STOCKS_WATCH_FILE_PATH = path_1.default.resolve(__dirname, 'customStocksWatch.json');
 const CUSTOM_COINS_WATCH_FILE_PATH = path_1.default.resolve(__dirname, 'customCoinsWatch.json');
@@ -111,16 +112,16 @@ function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
         const safeDelayTime = calculateSafeDelay(coins.length);
         // const safeDelayTime = 5000;
-        console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
+        console.log(`${(0, logDate_1.logDate)()}: Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
         const results = [];
         for (const coin of coins) {
             try {
                 const result = yield processCoin(coin);
                 results.push(result);
-                console.log(`Processed OK coin: ${coin.code} ${result.currentPrice}`);
+                console.log(`${(0, logDate_1.logDate)()}: Processed OK coin: ${coin.code} ${result.currentPrice}`);
             }
             catch (error) {
-                console.error(`Error processing coin: ${coin.code}`, error);
+                console.error(`${(0, logDate_1.logDate)()}: Error processing coin: ${coin.code}`, error);
             }
             yield delay(safeDelayTime);
         }
@@ -136,7 +137,7 @@ const readStocksCoinsConfigData = () => {
         return { stocks: [...stocksRes], coins: [...coinsRes] };
     }
     catch (error) {
-        console.log('Error trying to read config', error);
+        console.log('${logDate()}: Error trying to read config', error);
     }
 };
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -165,10 +166,10 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const combined = [...stockResults, ...coinResults];
     try {
         fs_1.default.writeFileSync(OUTPUT_FILE, JSON.stringify(combined, null, 2));
-        console.log(`Stock results written to ${OUTPUT_FILE}`);
+        console.log(`${(0, logDate_1.logDate)()}: Stock results written to ${OUTPUT_FILE}`);
     }
     catch (error) {
-        console.error('Error writing to file', error);
+        console.error(`${(0, logDate_1.logDate)()}: Error writing to file`, error);
     }
 });
 main();

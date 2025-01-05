@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import * as crypto from 'crypto';
 import path from 'path';
 import nodemailer from 'nodemailer';
+import { logDate } from './utils/logDate';
 
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
 const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
@@ -22,7 +23,7 @@ function readCoinStorage() {
 // Function to write coin storage to file
 function writeCoinStorage(coins: string[]) {
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(coins, null, 2), 'utf8');
-  console.log(`Updated ${OUTPUT_FILE}`);
+  console.log(`${logDate()}: Updated ${OUTPUT_FILE}`);
 }
 
 // Function to send email
@@ -48,9 +49,9 @@ async function sendEmail(newCoins: any[]) {
     };
 
     await transporter.sendMail(message);
-    console.log('Email sent to rkrawczyszyn@gmail.com');
+    console.log(`${logDate()}: Email sent to rkrawczyszyn@gmail.com`);
   } catch (error) {
-    console.error('Failed to send email:', error);
+    console.error(`${logDate()}: Failed to send email:`, error);
   }
 }
 
@@ -59,11 +60,11 @@ function loadCredentials(credentialsPath: string) {
     const rawData = fs.readFileSync(credentialsPath, 'utf8');
 
     const result = JSON.parse(rawData);
-    console.log('show cred result', result);
+    console.log(`${logDate()}: show cred result`, result);
 
     return result;
   } catch (err) {
-    console.error('Failed to read credentials:', err);
+    console.error(`${logDate()}: Failed to read credentials:`, err);
   }
 }
 
@@ -103,7 +104,7 @@ async function processCoins() {
     // Log new coins to console and send email
     if (newCoins.length > 0) {
       console.log(
-        'New coins detected:',
+        `${logDate()}: New coins detected:`,
         newCoins.map((coin) => coin.coin)
       );
 
@@ -114,10 +115,10 @@ async function processCoins() {
       const updatedCoins = [...storedCoins, ...newCoins.map((coin) => coin.coin)];
       writeCoinStorage(updatedCoins);
     } else {
-      console.log('No new coins found.');
+      console.log(`${logDate()}: No new coins found.`);
     }
   } catch (error) {
-    console.error('Error:', error);
+    console.error(`${logDate()}: Error:`, error);
   }
 }
 

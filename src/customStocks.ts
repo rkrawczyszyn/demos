@@ -2,6 +2,7 @@ import yahooFinance from 'yahoo-finance2';
 import fs from 'fs';
 import https from 'https';
 import path from 'path';
+import { logDate } from './utils/logDate';
 
 const OUTPUT_FILE = path.resolve(__dirname, 'custom-stock-watch-results.json');
 const CUSTOM_STOCKS_WATCH_FILE_PATH = path.resolve(__dirname, 'customStocksWatch.json');
@@ -161,7 +162,7 @@ function delay(ms: number) {
 async function processCoinsSequentially(coins: any[]) {
   const safeDelayTime = calculateSafeDelay(coins.length);
   // const safeDelayTime = 5000;
-  console.log(`Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
+  console.log(`${logDate()}: Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
 
   const results = [];
 
@@ -169,9 +170,9 @@ async function processCoinsSequentially(coins: any[]) {
     try {
       const result = await processCoin(coin);
       results.push(result);
-      console.log(`Processed OK coin: ${coin.code} ${result.currentPrice}`);
+      console.log(`${logDate()}: Processed OK coin: ${coin.code} ${result.currentPrice}`);
     } catch (error) {
-      console.error(`Error processing coin: ${coin.code}`, error);
+      console.error(`${logDate()}: Error processing coin: ${coin.code}`, error);
     }
     await delay(safeDelayTime);
   }
@@ -189,7 +190,7 @@ const readStocksCoinsConfigData = () => {
 
     return { stocks: [...stocksRes], coins: [...coinsRes] };
   } catch (error) {
-    console.log('Error trying to read config', error);
+    console.log('${logDate()}: Error trying to read config', error);
   }
 };
 
@@ -241,9 +242,9 @@ const main = async () => {
 
   try {
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(combined, null, 2));
-    console.log(`Stock results written to ${OUTPUT_FILE}`);
+    console.log(`${logDate()}: Stock results written to ${OUTPUT_FILE}`);
   } catch (error) {
-    console.error('Error writing to file', error);
+    console.error(`${logDate()}: Error writing to file`, error);
   }
 };
 

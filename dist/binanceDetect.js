@@ -41,6 +41,7 @@ const fs = __importStar(require("fs"));
 const crypto = __importStar(require("crypto"));
 const path_1 = __importDefault(require("path"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
+const logDate_1 = require("./utils/logDate");
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
 const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'coinStorage.json');
@@ -57,7 +58,7 @@ function readCoinStorage() {
 // Function to write coin storage to file
 function writeCoinStorage(coins) {
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(coins, null, 2), 'utf8');
-    console.log(`Updated ${OUTPUT_FILE}`);
+    console.log(`${(0, logDate_1.logDate)()}: Updated ${OUTPUT_FILE}`);
 }
 // Function to send email
 function sendEmail(newCoins) {
@@ -80,10 +81,10 @@ function sendEmail(newCoins) {
                 text: `New coins detected:\n\n${JSON.stringify(newCoins, null, 2)}`,
             };
             yield transporter.sendMail(message);
-            console.log('Email sent to rkrawczyszyn@gmail.com');
+            console.log(`${(0, logDate_1.logDate)()}: Email sent to rkrawczyszyn@gmail.com`);
         }
         catch (error) {
-            console.error('Failed to send email:', error);
+            console.error(`${(0, logDate_1.logDate)()}: Failed to send email:`, error);
         }
     });
 }
@@ -91,11 +92,11 @@ function loadCredentials(credentialsPath) {
     try {
         const rawData = fs.readFileSync(credentialsPath, 'utf8');
         const result = JSON.parse(rawData);
-        console.log('show cred result', result);
+        console.log(`${(0, logDate_1.logDate)()}: show cred result`, result);
         return result;
     }
     catch (err) {
-        console.error('Failed to read credentials:', err);
+        console.error(`${(0, logDate_1.logDate)()}: Failed to read credentials:`, err);
     }
 }
 // Main function to process coins
@@ -127,7 +128,7 @@ function processCoins() {
             const newCoins = fetchedCoins.filter((coin) => !storedCoins.includes(coin.coin));
             // Log new coins to console and send email
             if (newCoins.length > 0) {
-                console.log('New coins detected:', newCoins.map((coin) => coin.coin));
+                console.log(`${(0, logDate_1.logDate)()}: New coins detected:`, newCoins.map((coin) => coin.coin));
                 // Send email with new coins and fetched data
                 yield sendEmail(newCoins);
                 // Update coin storage with new coins and write to file
@@ -135,11 +136,11 @@ function processCoins() {
                 writeCoinStorage(updatedCoins);
             }
             else {
-                console.log('No new coins found.');
+                console.log(`${(0, logDate_1.logDate)()}: No new coins found.`);
             }
         }
         catch (error) {
-            console.error('Error:', error);
+            console.error(`${(0, logDate_1.logDate)()}: Error:`, error);
         }
     });
 }
