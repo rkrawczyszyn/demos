@@ -133,6 +133,8 @@ const readStocksCoinsConfigData = () => {
         const coinsString = fs_1.default.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
         const stocks = JSON.parse(stocksString);
         const coins = JSON.parse(coinsString);
+        console.log('show stocks', stocks);
+        console.log('show coins', coins);
         return { stocks, coins };
     }
     catch (error) {

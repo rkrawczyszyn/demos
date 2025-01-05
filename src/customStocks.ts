@@ -187,6 +187,9 @@ const readStocksCoinsConfigData = () => {
     const stocks = JSON.parse(stocksString);
     const coins = JSON.parse(coinsString);
 
+    console.log('show stocks', stocks);
+    console.log('show coins', coins);
+
     return { stocks, coins };
   } catch (error) {
     console.log('Error trying to read config', error);
