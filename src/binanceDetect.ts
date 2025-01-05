@@ -5,24 +5,8 @@ import * as crypto from 'crypto';
 import path from 'path';
 import nodemailer from 'nodemailer';
 
-// Binance API key and secret
-const apiKey: string = '';
-const apiSecret: string = '';
+const CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
 const OUTPUT_FILE = path.resolve(__dirname, 'coinStorage.json');
-
-// Build the request
-const baseUrl: string = 'https://api.binance.com/sapi/v1/capital/config/getall';
-const timestamp: number = new Date().getTime();
-const queryString: string = `timestamp=${timestamp}`;
-const signature: string = crypto.createHmac('sha256', apiSecret).update(queryString).digest('hex');
-const url: string = `${baseUrl}?${queryString}&signature=${signature}`;
-
-// Options for axios
-const config = {
-  headers: {
-    'X-MBX-APIKEY': apiKey,
-  },
-};
 
 // Function to read coin storage from file
 function readCoinStorage() {
@@ -67,11 +51,41 @@ async function sendEmail(newCoins: any[]) {
   }
 }
 
+function loadCredentials() {
+  try {
+    const rawData = fs.readFileSync(CREDENTIALS_PATH, 'utf8');
+
+    const result = JSON.parse(rawData);
+    console.log('show cred result', result);
+
+    return result;
+  } catch (err) {
+    console.error('Failed to read credentials:', err);
+  }
+}
+
 // Main function to process coins
 async function processCoins() {
   try {
     // Read existing coins from storage
     const storedCoins = readCoinStorage();
+
+    const credentials = loadCredentials();
+    const apiKey = credentials.apiKey;
+    const apiSecret = credentials.apiSecret;
+
+    const config = {
+      headers: {
+        'X-MBX-APIKEY': apiKey,
+      },
+    };
+
+    // Build the request
+    const baseUrl: string = 'https://api.binance.com/sapi/v1/capital/config/getall';
+    const timestamp: number = new Date().getTime();
+    const queryString: string = `timestamp=${timestamp}`;
+    const signature: string = crypto.createHmac('sha256', apiSecret).update(queryString).digest('hex');
+    const url: string = `${baseUrl}?${queryString}&signature=${signature}`;
 
     // Fetch new coin data
     const response = await axios.get(url, config);
