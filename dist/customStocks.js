@@ -25,6 +25,49 @@ var ShareType;
     ShareType[ShareType["Stock"] = 0] = "Stock";
     ShareType[ShareType["Coin"] = 1] = "Coin";
 })(ShareType || (ShareType = {}));
+const calculateSafeDelay = (numRequests, maxRequestsPerMinute = 5) => {
+    const delayPerRequest = Math.ceil(60 / maxRequestsPerMinute);
+    const totalDelay = numRequests * delayPerRequest;
+    return delayPerRequest * 1000;
+};
+function delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+const fetchCoinData = (coinCode) => {
+    return new Promise((resolve, reject) => {
+        const url = `https://api.coingecko.com/api/v3/coins/${coinCode}/market_chart?vs_currency=pln&days=90`;
+        https_1.default
+            .get(url, (res) => {
+            let data = '';
+            res.on('data', (chunk) => {
+                data += chunk;
+            });
+            res.on('end', () => {
+                resolve(JSON.parse(data));
+            });
+        })
+            .on('error', (err) => {
+            reject(err);
+        });
+    });
+};
+const getPercentageProgressToAttractivePriceStart = (coinDetails) => {
+    return (((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
+        (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
+        100);
+};
+const readStocksCoinsConfigData = () => {
+    try {
+        const stocksString = fs_1.default.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
+        const coinsString = fs_1.default.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
+        const stocksRes = JSON.parse(stocksString);
+        const coinsRes = JSON.parse(coinsString);
+        return { stocks: [...stocksRes], coins: [...coinsRes] };
+    }
+    catch (error) {
+        console.log(`${(0, logDate_1.logDate)()}: Error trying to read config`, error);
+    }
+};
 const processStock = (stockInput) => __awaiter(void 0, void 0, void 0, function* () {
     const period2 = new Date();
     const now = new Date();
@@ -46,31 +89,15 @@ const processStock = (stockInput) => __awaiter(void 0, void 0, void 0, function*
         currentPrice: apiResults[apiResults.length - 1].close,
         periodStart: period1.toLocaleDateString(),
         periodEnd: period2.toLocaleDateString(),
-        attractivePriceMax: -1,
-        attractivePriceMin: -1,
-        url: '',
+        attractivePriceUberLow: stockInput.attractivePriceUberLow,
+        attractivePriceStart: stockInput.attractivePriceStart,
+        percentageProgressToAttractivePriceStart: -1,
+        url: stockInput.url,
         type: ShareType.Stock,
     };
+    singleResult.percentageProgressToAttractivePriceStart = getPercentageProgressToAttractivePriceStart(singleResult);
     return singleResult;
 });
-const fetchCoinData = (coinCode) => {
-    return new Promise((resolve, reject) => {
-        const url = `https://api.coingecko.com/api/v3/coins/${coinCode}/market_chart?vs_currency=pln&days=90`;
-        https_1.default
-            .get(url, (res) => {
-            let data = '';
-            res.on('data', (chunk) => {
-                data += chunk;
-            });
-            res.on('end', () => {
-                resolve(JSON.parse(data));
-            });
-        })
-            .on('error', (err) => {
-            reject(err);
-        });
-    });
-};
 const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* () {
     const period2 = new Date();
     const now = new Date();
@@ -83,8 +110,11 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
         price: price[1],
     }));
     const prices = apiResults.map((result) => result.price);
+    // sprobujmy zrobic min/max automatycznie
     const absoluteMin = Math.min(...prices);
     const absoluteMax = Math.max(...prices);
+    const halfWayPrice = absoluteMax / 2;
+    const attractivePriceStart = halfWayPrice < absoluteMin ? absoluteMin : halfWayPrice;
     const singleResult = {
         stockCode: coinInput.code,
         stockName: coinInput.name,
@@ -93,21 +123,15 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
         currentPrice: prices[prices.length - 1],
         periodStart: period1.toLocaleDateString(),
         periodEnd: period2.toLocaleDateString(),
-        attractivePriceMin: coinInput.attractivePriceMin,
-        attractivePriceMax: coinInput.attractivePriceMax,
+        attractivePriceStart: attractivePriceStart,
+        attractivePriceUberLow: absoluteMin,
+        percentageProgressToAttractivePriceStart: -1,
         url: coinInput.url,
         type: ShareType.Coin,
     };
+    singleResult.percentageProgressToAttractivePriceStart = getPercentageProgressToAttractivePriceStart(singleResult);
     return singleResult;
 });
-const calculateSafeDelay = (numRequests, maxRequestsPerMinute = 5) => {
-    const delayPerRequest = Math.ceil(60 / maxRequestsPerMinute);
-    const totalDelay = numRequests * delayPerRequest;
-    return delayPerRequest * 1000;
-};
-function delay(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
 function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
         const safeDelayTime = calculateSafeDelay(coins.length);
@@ -128,41 +152,13 @@ function processCoinsSequentially(coins) {
         return results;
     });
 }
-const readStocksCoinsConfigData = () => {
-    try {
-        const stocksString = fs_1.default.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
-        const coinsString = fs_1.default.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
-        const stocksRes = JSON.parse(stocksString);
-        const coinsRes = JSON.parse(coinsString);
-        return { stocks: [...stocksRes], coins: [...coinsRes] };
-    }
-    catch (error) {
-        console.log('${logDate()}: Error trying to read config', error);
-    }
-};
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    const result = readStocksCoinsConfigData();
-    if (!(result === null || result === void 0 ? void 0 : result.stocks) || !(result === null || result === void 0 ? void 0 : result.coins)) {
+    const fileReadResult = readStocksCoinsConfigData();
+    if (!(fileReadResult === null || fileReadResult === void 0 ? void 0 : fileReadResult.stocks) || !(fileReadResult === null || fileReadResult === void 0 ? void 0 : fileReadResult.coins)) {
         return;
     }
-    let stockResults = yield Promise.all(result.stocks.map(processStock));
-    let coinResults = yield processCoinsSequentially(result.coins);
-    // extend stocks
-    stockResults = stockResults.map((x) => {
-        const stockDetail = result.stocks.find((s) => s.code === x.stockCode);
-        if (!stockDetail) {
-            return x;
-        }
-        return Object.assign(Object.assign({}, x), { attractivePriceMax: stockDetail.attractivePriceMax, attractivePriceMin: stockDetail.attractivePriceMin, url: stockDetail.url, type: stockDetail.type });
-    });
-    // extend with coins
-    coinResults = coinResults.map((x) => {
-        const coinDetail = result.coins.find((s) => s.code === x.stockCode);
-        if (!coinDetail) {
-            return x;
-        }
-        return Object.assign(Object.assign({}, x), { attractivePriceMax: coinDetail.attractivePriceMax, attractivePriceMin: coinDetail.attractivePriceMin, url: coinDetail.url, type: coinDetail.type });
-    });
+    let stockResults = yield Promise.all(fileReadResult.stocks.map(processStock));
+    let coinResults = yield processCoinsSequentially(fileReadResult.coins);
     const combined = [...stockResults, ...coinResults];
     try {
         fs_1.default.writeFileSync(OUTPUT_FILE, JSON.stringify(combined, null, 2));
