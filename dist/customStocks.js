@@ -102,7 +102,6 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
     const period2 = new Date();
     const now = new Date();
     const period1 = new Date(now);
-    // 3 months ago
     period1.setDate(period1.getDate() - 90);
     const response = yield fetchCoinData(coinInput.code);
     const apiResults = response.prices.map((price) => ({
@@ -110,21 +109,18 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
         price: price[1],
     }));
     const prices = apiResults.map((result) => result.price);
-    // sprobujmy zrobic min/max automatycznie
-    const absoluteMin = Math.min(...prices);
-    const absoluteMax = Math.max(...prices);
-    const halfWayPrice = absoluteMax / 2;
-    const attractivePriceStart = halfWayPrice < absoluteMin ? absoluteMin : halfWayPrice;
+    const halfWayPrice = coinInput.max / 2;
+    const attractivePriceStart = halfWayPrice < coinInput.min ? coinInput.min : halfWayPrice;
     const singleResult = {
         stockCode: coinInput.code,
         stockName: coinInput.name,
-        absoluteMin,
-        absoluteMax,
+        absoluteMin: coinInput.min,
+        absoluteMax: coinInput.max,
         currentPrice: prices[prices.length - 1],
         periodStart: period1.toLocaleDateString(),
         periodEnd: period2.toLocaleDateString(),
         attractivePriceStart: attractivePriceStart,
-        attractivePriceUberLow: absoluteMin,
+        attractivePriceUberLow: coinInput.min,
         percentageProgressToAttractivePriceStart: -1,
         url: coinInput.url,
         type: ShareType.Coin,
