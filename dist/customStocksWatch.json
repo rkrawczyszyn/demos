@@ -1,0 +1,18 @@
+[
+  {
+    "code": "SBUX",
+    "name": "Starbucks",
+    "attractivePriceMin": 83,
+    "attractivePriceMax": 77,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/SBUX.US",
+    "type": 0
+  },
+  {
+    "code": "IUSQ.DE",
+    "name": "IShares MSCI ACWI (Acc)",
+    "attractivePriceMin": 84.5,
+    "attractivePriceMax": 80,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE",
+    "type": 0
+  }
+]
