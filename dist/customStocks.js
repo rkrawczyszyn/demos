@@ -131,27 +131,24 @@ const readStocksCoinsConfigData = () => {
     try {
         const stocksString = fs_1.default.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
         const coinsString = fs_1.default.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
-        const stocks = JSON.parse(stocksString);
-        const coins = JSON.parse(coinsString);
-        console.log('show stocks', stocks);
-        console.log('show coins', coins);
-        return { stocks, coins };
+        const stocksRes = JSON.parse(stocksString);
+        const coinsRes = JSON.parse(coinsString);
+        return { stocks: [...stocksRes], coins: [...coinsRes] };
     }
     catch (error) {
         console.log('Error trying to read config', error);
     }
-    finally {
-        return { stocks: {}, coins: {} };
-    }
 };
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    const { stocks, coins } = readStocksCoinsConfigData();
-    let stockResults = yield Promise.all(stocks.map(processStock));
-    // let coinResults = await Promise.all(coins.map(processCoin));
-    let coinResults = yield processCoinsSequentially(coins);
+    const result = readStocksCoinsConfigData();
+    if (!(result === null || result === void 0 ? void 0 : result.stocks) || !(result === null || result === void 0 ? void 0 : result.coins)) {
+        return;
+    }
+    let stockResults = yield Promise.all(result.stocks.map(processStock));
+    let coinResults = yield processCoinsSequentially(result.coins);
     // extend stocks
     stockResults = stockResults.map((x) => {
-        const stockDetail = stocks.find((s) => s.code === x.stockCode);
+        const stockDetail = result.stocks.find((s) => s.code === x.stockCode);
         if (!stockDetail) {
             return x;
         }
@@ -159,7 +156,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     });
     // extend with coins
     coinResults = coinResults.map((x) => {
-        const coinDetail = coins.find((s) => s.code === x.stockCode);
+        const coinDetail = result.coins.find((s) => s.code === x.stockCode);
         if (!coinDetail) {
             return x;
         }

@@ -184,31 +184,28 @@ const readStocksCoinsConfigData = () => {
     const stocksString = fs.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
     const coinsString = fs.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
 
-    const stocks = JSON.parse(stocksString);
-    const coins = JSON.parse(coinsString);
+    const stocksRes = JSON.parse(stocksString);
+    const coinsRes = JSON.parse(coinsString);
 
-    console.log('show stocks', stocks);
-    console.log('show coins', coins);
-
-    return { stocks, coins };
+    return { stocks: [...stocksRes], coins: [...coinsRes] };
   } catch (error) {
     console.log('Error trying to read config', error);
-  } finally {
-    return { stocks: {}, coins: {} };
   }
 };
 
 const main = async () => {
-  const { stocks, coins } = readStocksCoinsConfigData();
+  const result = readStocksCoinsConfigData();
 
-  let stockResults = await Promise.all(stocks.map(processStock));
-  // let coinResults = await Promise.all(coins.map(processCoin));
+  if (!result?.stocks || !result?.coins) {
+    return;
+  }
 
-  let coinResults = await processCoinsSequentially(coins);
+  let stockResults = await Promise.all(result.stocks.map(processStock));
+  let coinResults = await processCoinsSequentially(result.coins);
 
   // extend stocks
   stockResults = stockResults.map((x) => {
-    const stockDetail = stocks.find((s: any) => s.code === x.stockCode);
+    const stockDetail = result.stocks.find((s: any) => s.code === x.stockCode);
 
     if (!stockDetail) {
       return x;
@@ -225,7 +222,7 @@ const main = async () => {
 
   // extend with coins
   coinResults = coinResults.map((x) => {
-    const coinDetail = coins.find((s: any) => s.code === x.stockCode);
+    const coinDetail = result.coins.find((s: any) => s.code === x.stockCode);
 
     if (!coinDetail) {
       return x;

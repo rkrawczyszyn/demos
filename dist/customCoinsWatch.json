@@ -2,41 +2,145 @@
   {
     "code": "stellar",
     "name": "Stellar",
-    "attractivePriceMin": 0.5,
-    "attractivePriceMax": 0.3,
+    "attractivePriceMin": 0.63,
+    "attractivePriceMax": 0.31,
     "url": "https://www.coingecko.com/pl/waluty/stellar",
     "type": 1
   },
   {
     "code": "polygon-ecosystem-token",
     "name": "POL (ex-MATIC) (POL)",
-    "attractivePriceMin": 2.37,
-    "attractivePriceMax": 1.7,
+    "attractivePriceMin": 1.8,
+    "attractivePriceMax": 1.2,
     "url": "https://www.coingecko.com/pl/waluty/pol-ex-matic",
     "type": 1
   },
   {
     "code": "eos",
     "name": "EOS (EOS)",
-    "attractivePriceMin": 2.3,
-    "attractivePriceMax": 1.8,
+    "attractivePriceMin": 3.18,
+    "attractivePriceMax": 2.3,
     "url": "https://www.coingecko.com/pl/waluty/eos",
     "type": 1
   },
   {
     "code": "stepn",
     "name": "GMT",
-    "attractivePriceMin": 0.4,
-    "attractivePriceMax": 0.61,
+    "attractivePriceMin": 0.5,
+    "attractivePriceMax": 0.3,
     "url": "https://www.coingecko.com/pl/waluty/stepn",
     "type": 1
   },
   {
     "code": "book-of-meme",
     "name": "BOOK OF MEME (BOME)",
-    "attractivePriceMin": 0.02,
-    "attractivePriceMax": 0.03,
+    "attractivePriceMin": 0.025,
+    "attractivePriceMax": 0.02,
     "url": "https://www.coingecko.com/pl/waluty/book-of-meme",
+    "type": 1
+  },
+  {
+    "code": "litecoin",
+    "name": "Litecoin",
+    "attractivePriceMin": 193.5,
+    "attractivePriceMax": 118.56,
+    "url": "",
+    "type": 1
+  },
+  {
+    "code": "shiba-inu",
+    "name": "Shiba Inu",
+    "attractivePriceMin": 0.00005,
+    "attractivePriceMax": 0.00002,
+    "url": "https://www.coingecko.com/pl/waluty/shiba-inu",
+    "type": 1
+  },
+  {
+    "code": "bio-protocol",
+    "name": "Bio Protocol",
+    "attractivePriceMin": 2.8,
+    "attractivePriceMax": 1.5,
+    "url": "https://www.coingecko.com/pl/waluty/bio-protocol",
+    "type": 1
+  },
+  {
+    "code": "adventure-gold",
+    "name": "Adventure Gold",
+    "attractivePriceMin": 3.97,
+    "attractivePriceMax": 0.98,
+    "url": "https://www.coingecko.com/pl/waluty/adventure-gold",
+    "type": 1
+  },
+  {
+    "code": "avalanche",
+    "name": "Avalanche",
+    "attractivePriceMin": 76.8,
+    "attractivePriceMax": 37.67,
+    "url": "https://www.coingecko.com/pl/waluty/avalanche",
+    "type": 1
+  },
+  {
+    "code": "aave",
+    "name": "Aave",
+    "attractivePriceMin": 558,
+    "attractivePriceMax": 203,
+    "url": "https://www.coingecko.com/pl/waluty/aave",
+    "type": 1
+  },
+  {
+    "code": "hedera",
+    "name": "Hedera",
+    "attractivePriceMin": 0.4,
+    "attractivePriceMax": 0.17,
+    "url": "https://www.coingecko.com/pl/waluty/hedera",
+    "type": 1
+  },
+  {
+    "code": "steem",
+    "name": "Steem",
+    "attractivePriceMin": 0.75,
+    "attractivePriceMax": 0.6,
+    "url": "https://www.coingecko.com/pl/waluty/steem",
+    "type": 1
+  },
+  {
+    "code": "chainlink",
+    "name": "Chainlink",
+    "attractivePriceMin": 37.35,
+    "attractivePriceMax": 20.84,
+    "url": "https://www.coingecko.com/pl/waluty/chainlink",
+    "type": 1
+  },
+  {
+    "code": "ethena",
+    "name": "Ethena",
+    "attractivePriceMin": 2.04,
+    "attractivePriceMax": 0.8,
+    "url": "https://www.coingecko.com/pl/waluty/ethena",
+    "type": 1
+  },
+  {
+    "code": "movement",
+    "name": "Movement",
+    "attractivePriceMin": 3.45,
+    "attractivePriceMax": 2.4,
+    "url": "https://www.coingecko.com/pl/waluty/movement",
+    "type": 1
+  },
+  {
+    "code": "arbitrum",
+    "name": "Arbitrum",
+    "attractivePriceMin": 2.86,
+    "attractivePriceMax": 1.9,
+    "url": "https://www.coingecko.com/pl/waluty/arbitrum",
+    "type": 1
+  },
+  {
+    "code": "tron",
+    "name": "Tron",
+    "attractivePriceMin": 0.44,
+    "attractivePriceMax": 0.22,
+    "url": "https://www.coingecko.com/pl/waluty/tron",
     "type": 1
   }
 ]
