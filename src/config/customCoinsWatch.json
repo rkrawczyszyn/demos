@@ -1,0 +1,42 @@
+[
+  {
+    "code": "stellar",
+    "name": "Stellar",
+    "attractivePriceMin": 0.5,
+    "attractivePriceMax": 0.3,
+    "url": "https://www.coingecko.com/pl/waluty/stellar",
+    "type": 1
+  },
+  {
+    "code": "polygon-ecosystem-token",
+    "name": "POL (ex-MATIC) (POL)",
+    "attractivePriceMin": 2.37,
+    "attractivePriceMax": 1.7,
+    "url": "https://www.coingecko.com/pl/waluty/pol-ex-matic",
+    "type": 1
+  },
+  {
+    "code": "eos",
+    "name": "EOS (EOS)",
+    "attractivePriceMin": 2.3,
+    "attractivePriceMax": 1.8,
+    "url": "https://www.coingecko.com/pl/waluty/eos",
+    "type": 1
+  },
+  {
+    "code": "stepn",
+    "name": "GMT",
+    "attractivePriceMin": 0.4,
+    "attractivePriceMax": 0.61,
+    "url": "https://www.coingecko.com/pl/waluty/stepn",
+    "type": 1
+  },
+  {
+    "code": "book-of-meme",
+    "name": "BOOK OF MEME (BOME)",
+    "attractivePriceMin": 0.02,
+    "attractivePriceMax": 0.03,
+    "url": "https://www.coingecko.com/pl/waluty/book-of-meme",
+    "type": 1
+  }
+]

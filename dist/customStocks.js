@@ -17,6 +17,8 @@ const fs_1 = __importDefault(require("fs"));
 const https_1 = __importDefault(require("https"));
 const path_1 = __importDefault(require("path"));
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'custom-stock-watch-results.json');
+const CUSTOM_STOCKS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customStocksWatch.json';
+const CUSTOM_COINS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customCoinsWatch.json.json';
 var ShareType;
 (function (ShareType) {
     ShareType[ShareType["Stock"] = 0] = "Stock";
@@ -125,67 +127,23 @@ function processCoinsSequentially(coins) {
         return results;
     });
 }
+const readStocksCoinsConfigData = () => {
+    try {
+        const stocksString = fs_1.default.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
+        const coinsString = fs_1.default.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
+        const stocks = JSON.parse(stocksString);
+        const coins = JSON.parse(coinsString);
+        return { stocks, coins };
+    }
+    catch (error) {
+        console.log('Error trying to read config', error);
+    }
+    finally {
+        return { stocks: {}, coins: {} };
+    }
+};
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
-    const stocks = [
-        {
-            code: 'SBUX',
-            name: 'Starbucks',
-            attractivePriceMin: 83,
-            attractivePriceMax: 77,
-            url: 'https://www.trading212.com/pl/trading-instruments/invest/SBUX.US',
-            type: ShareType.Stock,
-        },
-        {
-            code: 'IUSQ.DE',
-            name: 'IShares MSCI ACWI (Acc)',
-            attractivePriceMin: 84.5,
-            attractivePriceMax: 80,
-            url: 'https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE',
-            type: ShareType.Stock,
-        },
-    ];
-    const coins = [
-        {
-            code: 'stellar',
-            name: 'Stellar',
-            attractivePriceMin: 0.5,
-            attractivePriceMax: 0.3,
-            url: 'https://www.coingecko.com/pl/waluty/stellar',
-            type: ShareType.Coin,
-        },
-        {
-            code: 'polygon-ecosystem-token',
-            name: 'POL (ex-MATIC) (POL)',
-            attractivePriceMin: 2.37,
-            attractivePriceMax: 1.7,
-            url: 'https://www.coingecko.com/pl/waluty/pol-ex-matic',
-            type: ShareType.Coin,
-        },
-        {
-            code: 'eos',
-            name: 'EOS (EOS)',
-            attractivePriceMin: 2.3,
-            attractivePriceMax: 1.8,
-            url: 'https://www.coingecko.com/pl/waluty/eos',
-            type: ShareType.Coin,
-        },
-        {
-            code: 'stepn',
-            name: 'GMT',
-            attractivePriceMin: 0.4,
-            attractivePriceMax: 0.61,
-            url: 'https://www.coingecko.com/pl/waluty/stepn',
-            type: ShareType.Coin,
-        },
-        {
-            code: 'book-of-meme',
-            name: 'BOOK OF MEME (BOME)',
-            attractivePriceMin: 0.02,
-            attractivePriceMax: 0.03,
-            url: 'https://www.coingecko.com/pl/waluty/book-of-meme',
-            type: ShareType.Coin,
-        },
-    ];
+    const { stocks, coins } = readStocksCoinsConfigData();
     let stockResults = yield Promise.all(stocks.map(processStock));
     // let coinResults = await Promise.all(coins.map(processCoin));
     let coinResults = yield processCoinsSequentially(coins);

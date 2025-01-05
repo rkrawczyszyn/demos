@@ -4,6 +4,8 @@ import https from 'https';
 import path from 'path';
 
 const OUTPUT_FILE = path.resolve(__dirname, 'custom-stock-watch-results.json');
+const CUSTOM_STOCKS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customStocksWatch.json';
+const CUSTOM_COINS_WATCH_FILE_PATH = '/home/rkrawczyszyn/config/customCoinsWatch.json';
 
 export interface StockData {
   date: Date;
@@ -177,68 +179,24 @@ async function processCoinsSequentially(coins: any[]) {
   return results;
 }
 
-const main = async () => {
-  const stocks = [
-    {
-      code: 'SBUX',
-      name: 'Starbucks',
-      attractivePriceMin: 83,
-      attractivePriceMax: 77,
-      url: 'https://www.trading212.com/pl/trading-instruments/invest/SBUX.US',
-      type: ShareType.Stock,
-    },
-    {
-      code: 'IUSQ.DE',
-      name: 'IShares MSCI ACWI (Acc)',
-      attractivePriceMin: 84.5,
-      attractivePriceMax: 80,
-      url: 'https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE',
-      type: ShareType.Stock,
-    },
-  ];
+const readStocksCoinsConfigData = () => {
+  try {
+    const stocksString = fs.readFileSync(CUSTOM_STOCKS_WATCH_FILE_PATH, 'utf8');
+    const coinsString = fs.readFileSync(CUSTOM_COINS_WATCH_FILE_PATH, 'utf8');
 
-  const coins = [
-    {
-      code: 'stellar',
-      name: 'Stellar',
-      attractivePriceMin: 0.5,
-      attractivePriceMax: 0.3,
-      url: 'https://www.coingecko.com/pl/waluty/stellar',
-      type: ShareType.Coin,
-    },
-    {
-      code: 'polygon-ecosystem-token',
-      name: 'POL (ex-MATIC) (POL)',
-      attractivePriceMin: 2.37,
-      attractivePriceMax: 1.7,
-      url: 'https://www.coingecko.com/pl/waluty/pol-ex-matic',
-      type: ShareType.Coin,
-    },
-    {
-      code: 'eos',
-      name: 'EOS (EOS)',
-      attractivePriceMin: 2.3,
-      attractivePriceMax: 1.8,
-      url: 'https://www.coingecko.com/pl/waluty/eos',
-      type: ShareType.Coin,
-    },
-    {
-      code: 'stepn',
-      name: 'GMT',
-      attractivePriceMin: 0.4,
-      attractivePriceMax: 0.61,
-      url: 'https://www.coingecko.com/pl/waluty/stepn',
-      type: ShareType.Coin,
-    },
-    {
-      code: 'book-of-meme',
-      name: 'BOOK OF MEME (BOME)',
-      attractivePriceMin: 0.02,
-      attractivePriceMax: 0.03,
-      url: 'https://www.coingecko.com/pl/waluty/book-of-meme',
-      type: ShareType.Coin,
-    },
-  ];
+    const stocks = JSON.parse(stocksString);
+    const coins = JSON.parse(coinsString);
+
+    return { stocks, coins };
+  } catch (error) {
+    console.log('Error trying to read config', error);
+  } finally {
+    return { stocks: {}, coins: {} };
+  }
+};
+
+const main = async () => {
+  const { stocks, coins } = readStocksCoinsConfigData();
 
   let stockResults = await Promise.all(stocks.map(processStock));
   // let coinResults = await Promise.all(coins.map(processCoin));
@@ -247,7 +205,7 @@ const main = async () => {
 
   // extend stocks
   stockResults = stockResults.map((x) => {
-    const stockDetail = stocks.find((s) => s.code === x.stockCode);
+    const stockDetail = stocks.find((s: any) => s.code === x.stockCode);
 
     if (!stockDetail) {
       return x;
@@ -264,7 +222,7 @@ const main = async () => {
 
   // extend with coins
   coinResults = coinResults.map((x) => {
-    const coinDetail = coins.find((s) => s.code === x.stockCode);
+    const coinDetail = coins.find((s: any) => s.code === x.stockCode);
 
     if (!coinDetail) {
       return x;
