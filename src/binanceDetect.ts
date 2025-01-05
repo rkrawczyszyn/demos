@@ -5,7 +5,8 @@ import * as crypto from 'crypto';
 import path from 'path';
 import nodemailer from 'nodemailer';
 
-const CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
+const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
+const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path.resolve(__dirname, 'coinStorage.json');
 
 // Function to read coin storage from file
@@ -27,13 +28,15 @@ function writeCoinStorage(coins: string[]) {
 // Function to send email
 async function sendEmail(newCoins: any[]) {
   try {
+    const mailCredentials = loadCredentials(MAIL_CREDENTIALS_PATH);
+
     const transporter = nodemailer.createTransport({
       host: 'smtp.wp.pl',
       port: 465,
       secure: true,
       auth: {
-        user: '',
-        pass: '',
+        user: mailCredentials.user,
+        pass: mailCredentials.pass,
       },
     });
 
@@ -51,9 +54,9 @@ async function sendEmail(newCoins: any[]) {
   }
 }
 
-function loadCredentials() {
+function loadCredentials(credentialsPath: string) {
   try {
-    const rawData = fs.readFileSync(CREDENTIALS_PATH, 'utf8');
+    const rawData = fs.readFileSync(credentialsPath, 'utf8');
 
     const result = JSON.parse(rawData);
     console.log('show cred result', result);
@@ -70,9 +73,9 @@ async function processCoins() {
     // Read existing coins from storage
     const storedCoins = readCoinStorage();
 
-    const credentials = loadCredentials();
-    const apiKey = credentials.apiKey;
-    const apiSecret = credentials.apiSecret;
+    const binanceCredentials = loadCredentials(BINANCE_CREDENTIALS_PATH);
+    const apiKey = binanceCredentials.apiKey;
+    const apiSecret = binanceCredentials.apiSecret;
 
     const config = {
       headers: {

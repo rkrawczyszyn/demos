@@ -41,7 +41,8 @@ const fs = __importStar(require("fs"));
 const crypto = __importStar(require("crypto"));
 const path_1 = __importDefault(require("path"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
-const CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
+const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
+const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'coinStorage.json');
 // Function to read coin storage from file
 function readCoinStorage() {
@@ -62,13 +63,14 @@ function writeCoinStorage(coins) {
 function sendEmail(newCoins) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            const mailCredentials = loadCredentials(MAIL_CREDENTIALS_PATH);
             const transporter = nodemailer_1.default.createTransport({
                 host: 'smtp.wp.pl',
                 port: 465,
                 secure: true,
                 auth: {
-                    user: '',
-                    pass: '',
+                    user: mailCredentials.user,
+                    pass: mailCredentials.pass,
                 },
             });
             const message = {
@@ -85,9 +87,9 @@ function sendEmail(newCoins) {
         }
     });
 }
-function loadCredentials() {
+function loadCredentials(credentialsPath) {
     try {
-        const rawData = fs.readFileSync(CREDENTIALS_PATH, 'utf8');
+        const rawData = fs.readFileSync(credentialsPath, 'utf8');
         const result = JSON.parse(rawData);
         console.log('show cred result', result);
         return result;
@@ -102,9 +104,9 @@ function processCoins() {
         try {
             // Read existing coins from storage
             const storedCoins = readCoinStorage();
-            const credentials = loadCredentials();
-            const apiKey = credentials.apiKey;
-            const apiSecret = credentials.apiSecret;
+            const binanceCredentials = loadCredentials(BINANCE_CREDENTIALS_PATH);
+            const apiKey = binanceCredentials.apiKey;
+            const apiSecret = binanceCredentials.apiSecret;
             const config = {
                 headers: {
                     'X-MBX-APIKEY': apiKey,
