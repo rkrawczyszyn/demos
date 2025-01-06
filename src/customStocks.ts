@@ -93,9 +93,10 @@ const fetchCoinData = (coinCode: string): Promise<any> => {
 
 const getPercentageProgressToAttractivePriceStart = (coinDetails: StockAnalysisResult) => {
   return (
+    100 -
     ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
       (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
-    100
+      100
   );
 };
 
