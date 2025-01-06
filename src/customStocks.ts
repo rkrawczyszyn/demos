@@ -92,6 +92,29 @@ const fetchCoinData = (coinCode: string): Promise<any> => {
 };
 
 const getPercentageProgressToAttractivePriceStart = (coinDetails: StockAnalysisResult) => {
+  const licznik = coinDetails.currentPrice - coinDetails.attractivePriceStart;
+  const mianownik = coinDetails.absoluteMax - coinDetails.attractivePriceStart;
+
+  const iloraz = licznik / mianownik;
+  const odwrocone = iloraz * 100;
+
+  const result = 100 - odwrocone;
+
+  const test =
+    100 -
+    ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
+      (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
+      100;
+
+  console.log(`show
+      licznik ${licznik},
+      mianownik ${mianownik},
+      iloraz ${iloraz},
+      odwrocone ${odwrocone},
+      result ${result},
+      test ${test},
+  `);
+
   return (
     100 -
     ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
@@ -172,6 +195,13 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
   const attractivePriceStart = halfWayPrice < coinInput.min ? coinInput.min : halfWayPrice;
 
+  console.log(`show
+      coinInput.min ${coinInput.min},
+      coinInput.max ${coinInput.max},
+      halfWayPrice ${halfWayPrice},
+      attractivePriceStart ${attractivePriceStart},
+  `);
+
   const singleResult: StockAnalysisResult = {
     stockCode: coinInput.code,
     stockName: coinInput.name,
@@ -188,6 +218,11 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
   };
 
   singleResult.percentageProgressToAttractivePriceStart = getPercentageProgressToAttractivePriceStart(singleResult);
+
+  console.log(
+    'show singleResult.percentageProgressToAttractivePriceStart',
+    singleResult.percentageProgressToAttractivePriceStart
+  );
 
   return singleResult;
 };
