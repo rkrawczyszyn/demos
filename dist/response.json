@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-06T15:00:08.806Z"
+    "updatedOn": "2025-01-06T16:00:10.910Z"
   },
   "slots": [
     {
@@ -18193,8 +18193,8 @@
       "start": "2025-01-07T08:00:00+01:00",
       "doctor_id": 374835,
       "address_id": 1027611,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/374835/1027611/2025-01-07T08:00:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -21018,6 +21018,20 @@
       }
     },
     {
+      "start": "2025-01-07T11:00:00+01:00",
+      "doctor_id": 302078,
+      "address_id": 902740,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-01-07T11:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/302078/addresses/902740",
+          "method": "get"
+        }
+      }
+    },
+    {
       "start": "2025-01-07T11:45:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
@@ -21119,8 +21133,8 @@
       "start": "2025-01-07T17:00:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-01-07T17:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -21133,8 +21147,8 @@
       "start": "2025-01-07T17:45:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-01-07T17:45:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -23247,8 +23261,8 @@
       "start": "2025-01-30T16:15:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-01-30T16:15:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
