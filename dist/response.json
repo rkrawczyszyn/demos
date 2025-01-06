@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-06T20:00:10.130Z"
+    "updatedOn": "2025-01-06T21:00:11.679Z"
   },
   "slots": [
     {
@@ -75,6 +75,20 @@
     },
     {
       "start": "2025-01-07T17:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": null,
+      "booked": true,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-01-07T18:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -6587,8 +6601,8 @@
       "start": "2025-01-08T18:10:00+01:00",
       "doctor_id": 350774,
       "address_id": 966936,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350774/966936/2025-01-08T18:10:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -17507,8 +17521,8 @@
       "start": "2025-01-07T11:20:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-01-07T11:20:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -17521,8 +17535,8 @@
       "start": "2025-01-07T12:10:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-01-07T12:10:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -17591,8 +17605,8 @@
       "start": "2025-01-11T13:50:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-01-11T13:50:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
