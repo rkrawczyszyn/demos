@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-09T10:00:10.425Z"
+    "updatedOn": "2025-01-09T11:00:09.708Z"
   },
   "slots": [
     {
@@ -4904,20 +4904,6 @@
       }
     },
     {
-      "start": "2025-01-15T10:00:00+01:00",
-      "doctor_id": 263877,
-      "address_id": 995702,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/263877/995702/2025-01-15T10:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/263877/addresses/995702",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-01-15T10:30:00+01:00",
       "doctor_id": 263877,
       "address_id": 995702,
@@ -8315,34 +8301,6 @@
       "_links": {
         "address": {
           "href": "/api/v3/doctors/350774/addresses/966936",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-09T12:00:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-09T12:30:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
           "method": "get"
         }
       }
@@ -19805,20 +19763,6 @@
       "address_id": 902740,
       "booking_url": null,
       "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/302078/addresses/902740",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-09T11:45:00+01:00",
-      "doctor_id": 302078,
-      "address_id": 902740,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-01-09T11:45:00+01:00",
-      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
