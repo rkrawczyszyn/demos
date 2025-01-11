@@ -142,5 +142,117 @@
     "max": 0.81,
     "url": "https://www.coingecko.com/pl/waluty/tron",
     "type": 1
+  },
+  {
+    "code": "binance-coin-wormhole",
+    "name": "Binance coin",
+    "attractivePriceStart": 2501,
+    "attractivePriceUberLow": 1932,
+    "url": "https://www.coingecko.com/pl/waluty/bnb",
+    "type": 1
+  },
+  {
+    "code": "ethereum",
+    "name": "Ethereum",
+    "attractivePriceStart": 7200,
+    "attractivePriceUberLow": 5736,
+    "url": "https://www.coingecko.com/pl/waluty/ethereum",
+    "type": 1
+  },
+  {
+    "code": "pudgy-penguins",
+    "name": "Pudgy Penguins",
+    "attractivePriceStart": 0.13,
+    "attractivePriceUberLow": 0.1,
+    "url": "https://www.coingecko.com/pl/waluty/pudgy-penguins",
+    "type": 1
+  },
+  {
+    "code": "doge",
+    "name": "Doge",
+    "attractivePriceStart": 1.55,
+    "attractivePriceUberLow": 1.3,
+    "url": "https://www.coingecko.com/pl/waluty/dogecoin",
+    "type": 1
+  },
+  {
+    "code": "solana",
+    "name": "Solana",
+    "attractivePriceStart": 616,
+    "attractivePriceUberLow": 558,
+    "url": "https://www.coingecko.com/pl/waluty/solana",
+    "type": 1
+  },
+  {
+    "code": "pepe",
+    "name": "Pepe",
+    "attractivePriceStart": 0.0000368,
+    "attractivePriceUberLow": 0.000042,
+    "url": "https://www.coingecko.com/pl/waluty/pepe",
+    "type": 1
+  },
+  {
+    "code": "ada",
+    "name": "Cardano",
+    "attractivePriceStart": 2.32,
+    "attractivePriceUberLow": 1.25,
+    "url": "",
+    "type": 1
+  },
+  {
+    "code": "dymension",
+    "name": "Dymension",
+    "attractivePriceStart": 8,
+    "attractivePriceUberLow": 5,
+    "url": "https://www.coingecko.com/pl/waluty/dymension",
+    "type": 1
+  },
+  {
+    "code": "render-token",
+    "name": "Render token",
+    "attractivePriceStart": 24,
+    "attractivePriceUberLow": 6,
+    "url": "https://www.coingecko.com/pl/waluty/render",
+    "type": 1
+  },
+  {
+    "code": "usual",
+    "name": "Usual",
+    "attractivePriceStart": 2.4,
+    "attractivePriceUberLow": 2,
+    "url": "https://www.coingecko.com/pl/waluty/usual",
+    "type": 1
+  },
+  {
+    "code": "thorchain",
+    "name": "THORChain",
+    "attractivePriceStart": 20,
+    "attractivePriceUberLow": 3.5,
+    "url": "https://www.coingecko.com/pl/waluty/thorchain",
+    "type": 1
+  },
+  {
+    "code": "bitcoin-cash",
+    "name": "Bitcoin cash",
+    "attractivePriceStart": 1492,
+    "attractivePriceUberLow": 446,
+    "url": "https://www.coingecko.com/pl/waluty/bitcoin-cash",
+    "type": 1
+  },
+  {
+    "code": "adventure-gold",
+    "name": "Adventure gold",
+    "attractivePriceStart": 5.36,
+    "attractivePriceUberLow": 1.23,
+    "url": "https://www.coingecko.com/pl/waluty/adventure-gold",
+    "type": 1
+  },
+  {
+    "code": "dogwifcoin",
+    "name": "Dogwifcoin",
+    "attractivePriceStart": 8,
+    "attractivePriceUberLow": 5,
+    "url": "https://www.coingecko.com/pl/waluty/dogwifhat",
+    "type": 1
   }
 ]

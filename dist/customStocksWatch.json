@@ -14,5 +14,69 @@
     "attractivePriceUberLow": 80,
     "url": "https://www.trading212.com/pl/trading-instruments/invest/IUSQ.DE",
     "type": 0
+  },
+  {
+    "code": "MCD",
+    "name": "McDonalds",
+    "attractivePriceStart": 252.8,
+    "attractivePriceUberLow": 233,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/MCD.US",
+    "type": 1
+  },
+  {
+    "code": "O",
+    "name": "Realty Income",
+    "attractivePriceStart": 59.2,
+    "attractivePriceUberLow": 43,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/O.US",
+    "type": 1
+  },
+  {
+    "code": "JNJ",
+    "name": "Johnson & Johnson",
+    "attractivePriceStart": 145.5,
+    "attractivePriceUberLow": 150,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/JNJ.US",
+    "type": 1
+  },
+  {
+    "code": "KO",
+    "name": "Coca-Cola",
+    "attractivePriceStart": 56.8,
+    "attractivePriceUberLow": 53,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/KO.US",
+    "type": 1
+  },
+  {
+    "code": "CSCO",
+    "name": "Cisco",
+    "attractivePriceStart": 44,
+    "attractivePriceUberLow": 40,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/CSCO.US",
+    "type": 1
+  },
+  {
+    "code": "BP.L",
+    "name": "BP",
+    "attractivePriceStart": 448,
+    "attractivePriceUberLow": 430,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/BP.GB",
+    "type": 1
+  },
+  {
+    "code": "PPG",
+    "name": "PPG",
+    "attractivePriceStart": 120,
+    "attractivePriceUberLow": 111,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/PPG.US",
+    "type": 1
+  },
+  {
+    "code": "NAMI",
+    "name": "NAMI",
+    "attractivePriceStart": 3.296,
+    "attractivePriceUberLow": 3.9,
+    "url": "https://www.trading212.com/pl/trading-instruments/invest/NAMI.US",
+    "type": 1
   }
 ]
