@@ -26,8 +26,6 @@ enum ShareType {
 export interface StockAnalysisResult {
   stockCode: string;
   stockName: string;
-  absoluteMin: number;
-  absoluteMax: number;
   currentPrice: number;
   periodStart: string;
   periodEnd: string;
@@ -54,8 +52,8 @@ export interface CryptoData {
 interface CoinInput {
   code: string;
   name: string;
-  min: number;
-  max: number;
+  attractivePriceStart: number;
+  attractivePriceUberLow: number;
   url: string;
 }
 
@@ -92,35 +90,7 @@ const fetchCoinData = (coinCode: string): Promise<any> => {
 };
 
 const getPercentageProgressToAttractivePriceStart = (coinDetails: StockAnalysisResult) => {
-  const licznik = coinDetails.currentPrice - coinDetails.attractivePriceStart;
-  const mianownik = coinDetails.absoluteMax - coinDetails.attractivePriceStart;
-
-  const iloraz = licznik / mianownik;
-  const odwrocone = iloraz * 100;
-
-  const result = 100 - odwrocone;
-
-  const test =
-    100 -
-    ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
-      (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
-      100;
-
-  console.log(`show
-      licznik ${licznik},
-      mianownik ${mianownik},
-      iloraz ${iloraz},
-      odwrocone ${odwrocone},
-      result ${result},
-      test ${test},
-  `);
-
-  return (
-    100 -
-    ((coinDetails.currentPrice - coinDetails.attractivePriceStart) /
-      (coinDetails.absoluteMax - coinDetails.attractivePriceStart)) *
-      100
-  );
+  return 100 - (coinDetails.currentPrice / coinDetails.attractivePriceStart) * 100;
 };
 
 const readStocksCoinsConfigData = () => {
@@ -150,16 +120,9 @@ const processStock = async (stockInput: StockInput) => {
     period2,
   });
 
-  const closePrices = apiResults.map((result) => result.close);
-
-  const absoluteMin = Math.min(...closePrices);
-  const absoluteMax = Math.max(...closePrices);
-
   const singleResult: StockAnalysisResult = {
     stockCode: stockInput.code,
     stockName: stockInput.name,
-    absoluteMin,
-    absoluteMax,
     currentPrice: apiResults[apiResults.length - 1].close,
     periodStart: period1.toLocaleDateString(),
     periodEnd: period2.toLocaleDateString(),
@@ -191,27 +154,14 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
   const prices = apiResults.map((result) => result.price);
 
-  const halfWayPrice = coinInput.max / 2;
-
-  const attractivePriceStart = halfWayPrice < coinInput.min ? coinInput.min : halfWayPrice;
-
-  console.log(`show
-      coinInput.min ${coinInput.min},
-      coinInput.max ${coinInput.max},
-      halfWayPrice ${halfWayPrice},
-      attractivePriceStart ${attractivePriceStart},
-  `);
-
   const singleResult: StockAnalysisResult = {
     stockCode: coinInput.code,
     stockName: coinInput.name,
-    absoluteMin: coinInput.min,
-    absoluteMax: coinInput.max,
     currentPrice: prices[prices.length - 1],
     periodStart: period1.toLocaleDateString(),
     periodEnd: period2.toLocaleDateString(),
-    attractivePriceStart: attractivePriceStart,
-    attractivePriceUberLow: coinInput.min,
+    attractivePriceStart: coinInput.attractivePriceStart,
+    attractivePriceUberLow: coinInput.attractivePriceUberLow,
     percentageProgressToAttractivePriceStart: -1,
     url: coinInput.url,
     type: ShareType.Coin,
