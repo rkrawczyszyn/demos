@@ -2,32 +2,32 @@
   {
     "code": "stellar",
     "name": "Stellar",
-    "attractivePriceUberLow": 0.37,
-    "attractivePriceStart": 2.53,
+    "attractivePriceUberLow": 0.32,
+    "attractivePriceStart": 0.496,
     "url": "https://www.coingecko.com/pl/waluty/stellar",
     "type": 1
   },
   {
     "code": "polygon-ecosystem-token",
     "name": "POL (ex-MATIC) (POL)",
-    "attractivePriceUberLow": 1,
-    "attractivePriceStart": 3,
+    "attractivePriceUberLow": 1.21,
+    "attractivePriceStart": 1.6,
     "url": "https://www.coingecko.com/pl/waluty/pol-ex-matic",
     "type": 1
   },
   {
     "code": "eos",
     "name": "EOS (EOS)",
-    "attractivePriceUberLow": 1.64,
-    "attractivePriceStart": 6.1,
+    "attractivePriceUberLow": 2,
+    "attractivePriceStart": 2.4,
     "url": "https://www.coingecko.com/pl/waluty/eos",
     "type": 1
   },
   {
     "code": "stepn",
     "name": "GMT",
-    "attractivePriceUberLow": 0.5,
-    "attractivePriceStart": 1.5,
+    "attractivePriceUberLow": 0.37,
+    "attractivePriceStart": 0.6,
     "url": "https://www.coingecko.com/pl/waluty/stepn",
     "type": 1
   },
@@ -35,79 +35,71 @@
     "code": "book-of-meme",
     "name": "BOOK OF MEME (BOME)",
     "attractivePriceUberLow": 0.02,
-    "attractivePriceStart": 0.06,
+    "attractivePriceStart": 0.024,
     "url": "https://www.coingecko.com/pl/waluty/book-of-meme",
     "type": 1
   },
   {
     "code": "litecoin",
     "name": "Litecoin",
-    "attractivePriceUberLow": 225,
-    "attractivePriceStart": 550,
+    "attractivePriceUberLow": 200,
+    "attractivePriceStart": 320,
     "url": "https://www.coingecko.com/pl/waluty/litecoin",
     "type": 1
   },
   {
     "code": "shiba-inu",
     "name": "Shiba Inu",
-    "attractivePriceUberLow": 0.000029,
-    "attractivePriceStart": 0.00015,
+    "attractivePriceUberLow": 0.00005,
+    "attractivePriceStart": 0.00006,
     "url": "https://www.coingecko.com/pl/waluty/shiba-inu",
     "type": 1
   },
   {
     "code": "bio-protocol",
     "name": "Bio Protocol",
-    "attractivePriceUberLow": 2.8,
-    "attractivePriceStart": 3.65,
+    "attractivePriceUberLow": 1.5,
+    "attractivePriceStart": 1.6,
     "url": "https://www.coingecko.com/pl/waluty/bio-protocol",
-    "type": 1
-  },
-  {
-    "code": "adventure-gold",
-    "name": "Adventure Gold",
-    "attractivePriceUberLow": 3,
-    "attractivePriceStart": 12,
-    "url": "https://www.coingecko.com/pl/waluty/adventure-gold",
     "type": 1
   },
   {
     "code": "avalanche-2",
     "name": "Avalanche",
-    "attractivePriceUberLow": 75,
-    "attractivePriceStart": 225,
+    "attractivePriceUberLow": 39,
+    "attractivePriceStart": 80,
     "url": "https://www.coingecko.com/pl/waluty/avalanche",
     "type": 1
   },
   {
     "code": "aave",
     "name": "Aave",
-    "attractivePriceUberLow": 250,
-    "attractivePriceStart": 1500,
+    "attractivePriceUberLow": 222,
+    "attractivePriceStart": 312,
     "url": "https://www.coingecko.com/pl/waluty/aave",
     "type": 1
   },
   {
     "code": "hedera-hashgraph",
     "name": "Hedera",
-    "attractivePriceUberLow": 0.18,
-    "attractivePriceStart": 1.5,
+    "attractivePriceUberLow": 0.17,
+    "attractivePriceStart": 0.256,
     "url": "https://www.coingecko.com/pl/waluty/hedera",
     "type": 1
   },
   {
     "code": "steem",
     "name": "Steem",
-    "attractivePriceUberLow": 0.57,
-    "attractivePriceStart": 1.4,
+    "attractivePriceUberLow": 0.72,
+    "attractivePriceStart": 0.8,
     "url": "https://www.coingecko.com/pl/waluty/steem",
     "type": 1
   },
   {
     "code": "chainlink",
     "name": "Chainlink",
-    "attractivePriceUberLow": 40,
-    "attractivePriceStart": 120,
+    "attractivePriceUberLow": 21,
+    "attractivePriceStart": 40,
     "url": "https://www.coingecko.com/pl/waluty/chainlink",
     "type": 1
   },
@@ -123,23 +115,23 @@
     "code": "movement",
     "name": "Movement",
     "attractivePriceUberLow": 2.5,
-    "attractivePriceStart": 4.61,
+    "attractivePriceStart": 2.76,
     "url": "https://www.coingecko.com/pl/waluty/movement",
     "type": 1
   },
   {
     "code": "arbitrum",
     "name": "Arbitrum",
-    "attractivePriceUberLow": 1.95,
-    "attractivePriceStart": 8.54,
+    "attractivePriceUberLow": 1.9,
+    "attractivePriceStart": 3.2,
     "url": "https://www.coingecko.com/pl/waluty/arbitrum",
     "type": 1
   },
   {
     "code": "tron",
     "name": "Tron",
-    "attractivePriceUberLow": 0.47,
-    "attractivePriceStart": 0.81,
+    "attractivePriceUberLow": 0.24,
+    "attractivePriceStart": 0.4,
     "url": "https://www.coingecko.com/pl/waluty/tron",
     "type": 1
   },

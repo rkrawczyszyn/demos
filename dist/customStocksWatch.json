@@ -34,8 +34,8 @@
   {
     "code": "JNJ",
     "name": "Johnson & Johnson",
-    "attractivePriceStart": 145.5,
-    "attractivePriceUberLow": 150,
+    "attractivePriceStart": 150,
+    "attractivePriceUberLow": 145.5,
     "url": "https://www.trading212.com/pl/trading-instruments/invest/JNJ.US",
     "type": 1
   },
@@ -69,14 +69,6 @@
     "attractivePriceStart": 120,
     "attractivePriceUberLow": 111,
     "url": "https://www.trading212.com/pl/trading-instruments/invest/PPG.US",
-    "type": 1
-  },
-  {
-    "code": "NAMI",
-    "name": "NAMI",
-    "attractivePriceStart": 3.296,
-    "attractivePriceUberLow": 3.9,
-    "url": "https://www.trading212.com/pl/trading-instruments/invest/NAMI.US",
     "type": 1
   }
 ]
