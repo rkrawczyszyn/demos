@@ -261,7 +261,7 @@
     ],
     "absoluteMin": 60.810001373291016,
     "absoluteMax": 70.56999969482422,
-    "currentPrice": 62.02000045776367,
+    "currentPrice": 62.040000915527344,
     "periodStart": "16/10/2024",
     "periodEnd": "14/01/2025"
   },
@@ -299,7 +299,7 @@
     ],
     "absoluteMin": 51.66999816894531,
     "absoluteMax": 64.70999908447266,
-    "currentPrice": 53.15999984741211,
+    "currentPrice": 53.150001525878906,
     "periodStart": "16/10/2024",
     "periodEnd": "14/01/2025"
   },
@@ -335,9 +335,9 @@
         "adjClose": 289.8900146484375
       }
     ],
-    "absoluteMin": 281.5899963378906,
+    "absoluteMin": 281.5799865722656,
     "absoluteMax": 316.55999755859375,
-    "currentPrice": 281.5899963378906,
+    "currentPrice": 281.5799865722656,
     "periodStart": "16/10/2024",
     "periodEnd": "14/01/2025"
   },
@@ -375,7 +375,7 @@
     ],
     "absoluteMin": 142.05999755859375,
     "absoluteMax": 165.86000061035156,
-    "currentPrice": 144.75999450683594,
+    "currentPrice": 144.75,
     "periodStart": "16/10/2024",
     "periodEnd": "14/01/2025"
   },
@@ -489,7 +489,7 @@
     ],
     "absoluteMin": 141.14999389648438,
     "absoluteMax": 162.52999877929688,
-    "currentPrice": 156.8800048828125,
+    "currentPrice": 156.89999389648438,
     "periodStart": "16/10/2024",
     "periodEnd": "14/01/2025"
   },
