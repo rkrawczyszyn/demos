@@ -35,7 +35,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MAIL_CREDENTIALS_PATH = void 0;
 // Import required modules
 const axios_1 = __importDefault(require("axios"));
 const fs = __importStar(require("fs"));
@@ -44,8 +43,8 @@ const path_1 = __importDefault(require("path"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const logDate_1 = require("./utils/logDate");
 const loadCredentials_1 = require("./utils/loadCredentials");
+const filePaths_1 = require("./config/filePaths");
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
-exports.MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'coinStorage.json');
 // Function to read coin storage from file
 function readCoinStorage() {
@@ -66,7 +65,7 @@ function writeCoinStorage(coins) {
 function sendEmail(newCoins) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const mailCredentials = (0, loadCredentials_1.loadCredentials)(exports.MAIL_CREDENTIALS_PATH);
+            const mailCredentials = (0, loadCredentials_1.loadCredentials)(filePaths_1.MAIL_CREDENTIALS_PATH);
             const transporter = nodemailer_1.default.createTransport({
                 host: 'smtp.wp.pl',
                 port: 465,

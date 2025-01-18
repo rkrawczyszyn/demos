@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
-import { MAIL_CREDENTIALS_PATH } from '../binanceDetect';
 import { logDate } from '../utils/logDate';
 import { loadCredentials } from '../utils/loadCredentials';
+import { MAIL_CREDENTIALS_PATH } from '../config/filePaths';
 
 export const sendEmail = async (coinCode: string, currentValue: number) => {
   try {

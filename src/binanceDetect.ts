@@ -6,9 +6,9 @@ import path from 'path';
 import nodemailer from 'nodemailer';
 import { logDate } from './utils/logDate';
 import { loadCredentials } from './utils/loadCredentials';
+import { MAIL_CREDENTIALS_PATH } from './config/filePaths';
 
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
-export const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path.resolve(__dirname, 'coinStorage.json');
 
 // Function to read coin storage from file
