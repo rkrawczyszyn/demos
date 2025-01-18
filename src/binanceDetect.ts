@@ -7,7 +7,7 @@ import nodemailer from 'nodemailer';
 import { logDate } from './utils/logDate';
 
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
-const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
+export const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path.resolve(__dirname, 'coinStorage.json');
 
 // Function to read coin storage from file
@@ -55,7 +55,7 @@ async function sendEmail(newCoins: any[]) {
   }
 }
 
-function loadCredentials(credentialsPath: string) {
+export function loadCredentials(credentialsPath: string) {
   try {
     const rawData = fs.readFileSync(credentialsPath, 'utf8');
 
