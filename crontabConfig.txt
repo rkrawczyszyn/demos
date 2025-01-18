@@ -1,4 +1,7 @@
-0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/fetchSlots.js && /usr/bin/node /home/rkrawczyszyn/demos/dist/customStocks.js && /usr/bin/node /home/rkrawczyszyn/demos/dist/binanceDetect.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/cron.log 2>&1
-0 0,12 * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/cron.log 2>&1
+0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/fetchSlots.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/fetchSlots.log 2>&1
+0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/customStocks.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/customStocks.log 2>&1
+0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/binanceDetect.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/binanceDetect.log 2>&1
+ 
+0 0,12 * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/refreshToken.log 2>&1
 
 #* * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitTest.sh) >> /home/rkrawczyszyn/demos/dist/cron2.log 2>&1
