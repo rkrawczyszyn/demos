@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-18T17:00:11.797Z"
+    "updatedOn": "2025-01-18T18:00:16.044Z"
   },
   "slots": [
     {
@@ -4949,8 +4949,8 @@
       "start": "2025-01-23T17:00:00+01:00",
       "doctor_id": 263877,
       "address_id": 995702,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/263877/995702/2025-01-23T17:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -16247,8 +16247,8 @@
       "start": "2025-01-27T18:15:00+01:00",
       "doctor_id": 333060,
       "address_id": 950114,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/333060/950114/2025-01-27T18:15:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
