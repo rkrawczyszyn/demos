@@ -16,9 +16,10 @@ exports.sendEmail = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const binanceDetect_1 = require("../binanceDetect");
 const logDate_1 = require("../utils/logDate");
+const loadCredentials_1 = require("../utils/loadCredentials");
 const sendEmail = (coinCode, currentValue) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const mailCredentials = (0, binanceDetect_1.loadCredentials)(binanceDetect_1.MAIL_CREDENTIALS_PATH);
+        const mailCredentials = (0, loadCredentials_1.loadCredentials)(binanceDetect_1.MAIL_CREDENTIALS_PATH);
         const transporter = nodemailer_1.default.createTransport({
             host: 'smtp.wp.pl',
             port: 465,

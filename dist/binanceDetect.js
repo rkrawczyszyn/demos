@@ -35,7 +35,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadCredentials = exports.MAIL_CREDENTIALS_PATH = void 0;
+exports.MAIL_CREDENTIALS_PATH = void 0;
 // Import required modules
 const axios_1 = __importDefault(require("axios"));
 const fs = __importStar(require("fs"));
@@ -43,6 +43,7 @@ const crypto = __importStar(require("crypto"));
 const path_1 = __importDefault(require("path"));
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const logDate_1 = require("./utils/logDate");
+const loadCredentials_1 = require("./utils/loadCredentials");
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
 exports.MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
 const OUTPUT_FILE = path_1.default.resolve(__dirname, 'coinStorage.json');
@@ -65,7 +66,7 @@ function writeCoinStorage(coins) {
 function sendEmail(newCoins) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const mailCredentials = loadCredentials(exports.MAIL_CREDENTIALS_PATH);
+            const mailCredentials = (0, loadCredentials_1.loadCredentials)(exports.MAIL_CREDENTIALS_PATH);
             const transporter = nodemailer_1.default.createTransport({
                 host: 'smtp.wp.pl',
                 port: 465,
@@ -89,25 +90,13 @@ function sendEmail(newCoins) {
         }
     });
 }
-function loadCredentials(credentialsPath) {
-    try {
-        const rawData = fs.readFileSync(credentialsPath, 'utf8');
-        const result = JSON.parse(rawData);
-        console.log(`${(0, logDate_1.logDate)()}: show cred result`, result);
-        return result;
-    }
-    catch (err) {
-        console.error(`${(0, logDate_1.logDate)()}: Failed to read credentials:`, err);
-    }
-}
-exports.loadCredentials = loadCredentials;
 // Main function to process coins
 function processCoins() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // Read existing coins from storage
             const storedCoins = readCoinStorage();
-            const binanceCredentials = loadCredentials(BINANCE_CREDENTIALS_PATH);
+            const binanceCredentials = (0, loadCredentials_1.loadCredentials)(BINANCE_CREDENTIALS_PATH);
             const apiKey = binanceCredentials.apiKey;
             const apiSecret = binanceCredentials.apiSecret;
             const config = {

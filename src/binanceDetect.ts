@@ -5,6 +5,7 @@ import * as crypto from 'crypto';
 import path from 'path';
 import nodemailer from 'nodemailer';
 import { logDate } from './utils/logDate';
+import { loadCredentials } from './utils/loadCredentials';
 
 const BINANCE_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/binanceCredentials.json';
 export const MAIL_CREDENTIALS_PATH = '/home/rkrawczyszyn/credentials/mailCredentials.json';
@@ -52,19 +53,6 @@ async function sendEmail(newCoins: any[]) {
     console.log(`${logDate()}: Email sent to rkrawczyszyn@gmail.com`);
   } catch (error) {
     console.error(`${logDate()}: Failed to send email:`, error);
-  }
-}
-
-export function loadCredentials(credentialsPath: string) {
-  try {
-    const rawData = fs.readFileSync(credentialsPath, 'utf8');
-
-    const result = JSON.parse(rawData);
-    console.log(`${logDate()}: show cred result`, result);
-
-    return result;
-  } catch (err) {
-    console.error(`${logDate()}: Failed to read credentials:`, err);
   }
 }
 
