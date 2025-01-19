@@ -179,7 +179,7 @@ const processCoin = async (coinInput: CoinInput): Promise<StockAnalysisResult> =
 
 async function processCoinsSequentially(coins: any[]) {
   // const safeDelayTime = calculateSafeDelay(coins.length);
-  const safeDelayTime = 5000;
+  const safeDelayTime = 6000;
   console.log(`${logDate()}: Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
 
   const results = [];
