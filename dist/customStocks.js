@@ -121,7 +121,7 @@ const processCoin = (coinInput) => __awaiter(void 0, void 0, void 0, function* (
 function processCoinsSequentially(coins) {
     return __awaiter(this, void 0, void 0, function* () {
         // const safeDelayTime = calculateSafeDelay(coins.length);
-        const safeDelayTime = 6000;
+        const safeDelayTime = 9000;
         console.log(`${(0, logDate_1.logDate)()}: Using a delay of ${safeDelayTime / 1000} seconds between each request.`);
         const results = [];
         for (const coin of coins) {
