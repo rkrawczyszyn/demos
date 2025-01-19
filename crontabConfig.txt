@@ -1,8 +1,5 @@
-0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/fetchSlots.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/fetchSlots.log 2>&1
-*/30 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/customStocks.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/customStocks.log 2>&1
-*/5 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/binanceDetect.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/binanceDetect.log 2>&1
-*/15 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/coinPriceAlert/cryptoWatcher.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/cryptoWatcher.log 2>&1
- 
-0 0,12 * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/refreshToken.log 2>&1
-
-#* * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitTest.sh) >> /home/rkrawczyszyn/demos/dist/cron2.log 2>&1
+0 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/apps/fetchSlots/fetchSlots.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/logs/fetchSlots.log 2>&1
+*/30 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/apps/customStocks/customStocks.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/logs/customStocks.log 2>&1
+*/5 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/apps/binanceDetect/binanceDetect.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/logs/binanceDetect.log 2>&1
+*/15 * * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/apps/coinPriceAlert/cryptoWatcher.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/logs/cryptoWatcher.log 2>&1
+0 0,12 * * * (/usr/bin/node /home/rkrawczyszyn/demos/dist/apps/refreshToken/refreshToken.js && /home/rkrawczyszyn/demos/dist/gitUpdate.sh) >> /home/rkrawczyszyn/demos/dist/logs/refreshToken.log 2>&1
