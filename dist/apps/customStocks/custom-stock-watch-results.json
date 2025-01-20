@@ -132,15 +132,15 @@
     "type": "Coin"
   },
   {
-    "stockCode": "eos",
-    "stockName": "EOS (EOS)",
-    "currentPrice": 3.3641506723987056,
+    "stockCode": "bio-protocol",
+    "stockName": "Bio Protocol",
+    "currentPrice": 1.088448910039064,
     "periodStart": "22/10/2024",
     "periodEnd": "20/01/2025",
-    "attractivePriceStart": 2.4,
-    "attractivePriceUberLow": 2,
-    "percentageProgressToAttractivePriceStart": -40.17294468327941,
-    "url": "https://www.coingecko.com/pl/waluty/eos",
+    "attractivePriceStart": 1.6,
+    "attractivePriceUberLow": 1.5,
+    "percentageProgressToAttractivePriceStart": 31.971943122558514,
+    "url": "https://www.coingecko.com/pl/waluty/bio-protocol",
     "type": "Coin"
   },
   {
@@ -168,15 +168,15 @@
     "type": "Coin"
   },
   {
-    "stockCode": "hedera-hashgraph",
-    "stockName": "Hedera",
-    "currentPrice": 1.3496531863605916,
+    "stockCode": "arbitrum",
+    "stockName": "Arbitrum",
+    "currentPrice": 2.8781671831675646,
     "periodStart": "22/10/2024",
     "periodEnd": "20/01/2025",
-    "attractivePriceStart": 0.256,
-    "attractivePriceUberLow": 0.17,
-    "percentageProgressToAttractivePriceStart": -427.20827592210617,
-    "url": "https://www.coingecko.com/pl/waluty/hedera",
+    "attractivePriceStart": 3.2,
+    "attractivePriceUberLow": 1.9,
+    "percentageProgressToAttractivePriceStart": 10.057275526013612,
+    "url": "https://www.coingecko.com/pl/waluty/arbitrum",
     "type": "Coin"
   },
   {
