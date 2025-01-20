@@ -188,7 +188,7 @@ exports.customCoinsToWatchList = [
         type: ShareType_1.ShareType.Coin,
     },
     {
-        code: 'ada',
+        code: 'cardano',
         name: 'Cardano',
         attractivePriceStart: 2.32,
         attractivePriceUberLow: 1.25,
