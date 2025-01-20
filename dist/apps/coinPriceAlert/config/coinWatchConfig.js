@@ -38,4 +38,28 @@ exports.coinWatchConfig = [
         value: 0.1,
         step: 0.1,
     },
+    {
+        coinCode: 'bio-protocol',
+        direction: 'GoDown',
+        value: 0.95,
+        step: 0.1,
+    },
+    {
+        coinCode: 'usual',
+        direction: 'GoDown',
+        value: 1.6,
+        step: 0.1,
+    },
+    {
+        coinCode: 'book-of-meme',
+        direction: 'GoDown',
+        value: 0.019,
+        step: 0.001,
+    },
+    {
+        coinCode: 'dogwifcoin',
+        direction: 'GoDown',
+        value: 6,
+        step: 0.1,
+    },
 ];
