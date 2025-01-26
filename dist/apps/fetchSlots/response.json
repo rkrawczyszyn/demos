@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-26T11:00:09.633Z"
+    "updatedOn": "2025-01-26T12:00:15.383Z"
   },
   "slots": [
     {
@@ -15208,34 +15208,6 @@
       }
     },
     {
-      "start": "2025-01-30T13:00:00+01:00",
-      "doctor_id": 262029,
-      "address_id": 946215,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/262029/946215/2025-01-30T13:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/262029/addresses/946215",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-01-30T13:50:00+01:00",
-      "doctor_id": 262029,
-      "address_id": 946215,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/262029/946215/2025-01-30T13:50:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/262029/addresses/946215",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-01-30T14:40:00+01:00",
       "doctor_id": 262029,
       "address_id": 946215,
@@ -16317,8 +16289,8 @@
       "start": "2025-01-27T15:40:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-01-27T15:40:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -16485,8 +16457,8 @@
       "start": "2025-01-31T14:50:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-01-31T14:50:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -16695,8 +16667,8 @@
       "start": "2025-02-04T12:10:00+01:00",
       "doctor_id": 331654,
       "address_id": 879864,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/331654/879864/2025-02-04T12:10:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
