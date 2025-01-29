@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-29T19:00:14.835Z"
+    "updatedOn": "2025-01-29T20:00:13.674Z"
   },
   "slots": [
     {
@@ -4627,8 +4627,8 @@
       "start": "2025-01-30T16:00:00+01:00",
       "doctor_id": 263877,
       "address_id": 995702,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/263877/995702/2025-01-30T16:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
