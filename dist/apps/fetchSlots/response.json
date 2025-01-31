@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-01-31T14:00:14.284Z"
+    "updatedOn": "2025-01-31T15:00:13.341Z"
   },
   "slots": [
     {
@@ -2597,8 +2597,8 @@
       "start": "2025-02-07T10:20:00+01:00",
       "doctor_id": 359103,
       "address_id": 982493,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/359103/982493/2025-02-07T10:20:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -8365,8 +8365,8 @@
       "start": "2025-02-01T13:30:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-02-01T13:30:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -8379,8 +8379,8 @@
       "start": "2025-02-01T13:45:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-02-01T13:45:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -8393,8 +8393,8 @@
       "start": "2025-02-01T14:00:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-02-01T14:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -8407,8 +8407,8 @@
       "start": "2025-02-01T14:15:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-02-01T14:15:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
