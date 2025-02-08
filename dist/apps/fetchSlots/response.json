@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-08T13:00:17.283Z"
+    "updatedOn": "2025-02-08T14:00:10.650Z"
   },
   "slots": [
     {
@@ -17407,20 +17407,6 @@
     },
     {
       "start": "2025-02-10T12:30:00+01:00",
-      "doctor_id": 302078,
-      "address_id": 902740,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/302078/addresses/902740",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-10T13:15:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
       "booking_url": null,
