@@ -1,22 +1,8 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-11T15:00:12.941Z"
+    "updatedOn": "2025-02-11T16:00:13.022Z"
   },
   "slots": [
-    {
-      "start": "2025-02-11T16:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
     {
       "start": "2025-02-11T17:00:00+01:00",
       "doctor_id": 350711,
@@ -16155,20 +16141,6 @@
       "_links": {
         "address": {
           "href": "/api/v3/doctors/331654/addresses/879864",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-11T16:00:00+01:00",
-      "doctor_id": 374835,
-      "address_id": 1027611,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/374835/addresses/1027611",
           "method": "get"
         }
       }
