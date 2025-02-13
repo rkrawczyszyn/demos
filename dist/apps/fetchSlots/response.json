@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-13T13:00:14.139Z"
+    "updatedOn": "2025-02-13T14:00:13.083Z"
   },
   "slots": [
     {
@@ -8502,20 +8502,6 @@
       }
     },
     {
-      "start": "2025-02-13T15:00:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-02-13T15:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-02-14T08:00:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
@@ -13752,20 +13738,6 @@
       }
     },
     {
-      "start": "2025-02-13T14:40:00+01:00",
-      "doctor_id": 262029,
-      "address_id": 946215,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/262029/addresses/946215",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-02-13T15:30:00+01:00",
       "doctor_id": 262029,
       "address_id": 946215,
@@ -13785,20 +13757,6 @@
       "address_id": 946215,
       "booking_url": null,
       "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/262029/addresses/946215",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-13T17:10:00+01:00",
-      "doctor_id": 262029,
-      "address_id": 946215,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/262029/946215/2025-02-13T17:10:00+01:00",
-      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -13937,8 +13895,8 @@
       "start": "2025-02-20T15:30:00+01:00",
       "doctor_id": 262029,
       "address_id": 946215,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/262029/946215/2025-02-20T15:30:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -16113,20 +16071,6 @@
       "_links": {
         "address": {
           "href": "/api/v3/doctors/331654/addresses/879864",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-13T14:00:00+01:00",
-      "doctor_id": 374835,
-      "address_id": 1027611,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/374835/addresses/1027611",
           "method": "get"
         }
       }
