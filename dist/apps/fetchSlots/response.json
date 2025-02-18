@@ -1,22 +1,8 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-18T18:00:16.507Z"
+    "updatedOn": "2025-02-18T19:00:13.988Z"
   },
   "slots": [
-    {
-      "start": "2025-02-18T19:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
     {
       "start": "2025-02-19T07:00:00+01:00",
       "doctor_id": 350711,
@@ -2163,8 +2149,8 @@
       "start": "2025-03-27T19:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T19:00:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
