@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-21T12:00:14.728Z"
+    "updatedOn": "2025-02-21T13:00:11.859Z"
   },
   "slots": [
     {
@@ -9426,34 +9426,6 @@
       }
     },
     {
-      "start": "2025-02-21T14:00:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-21T14:30:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-02-21T15:00:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
@@ -14942,20 +14914,6 @@
       }
     },
     {
-      "start": "2025-02-21T17:00:00+01:00",
-      "doctor_id": 348936,
-      "address_id": 1031602,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/348936/1031602/2025-02-21T17:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/348936/addresses/1031602",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-02-24T08:30:00+01:00",
       "doctor_id": 348936,
       "address_id": 1031602,
@@ -14988,20 +14946,6 @@
       "doctor_id": 348936,
       "address_id": 1031602,
       "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/348936/1031602/2025-02-24T10:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/348936/addresses/1031602",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-25T16:00:00+01:00",
-      "doctor_id": 348936,
-      "address_id": 1031602,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/348936/1031602/2025-02-25T16:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -21091,8 +21035,8 @@
       "start": "2025-03-20T10:15:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-03-20T10:15:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
