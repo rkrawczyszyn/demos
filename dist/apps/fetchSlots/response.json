@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-24T06:00:15.587Z"
+    "updatedOn": "2025-02-24T07:00:14.280Z"
   },
   "slots": [
     {
@@ -2919,8 +2919,8 @@
       "start": "2025-02-26T07:00:00+01:00",
       "doctor_id": 359103,
       "address_id": 982493,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/359103/982493/2025-02-26T07:00:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
