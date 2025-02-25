@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-02-25T05:00:13.052Z"
+    "updatedOn": "2025-02-25T06:00:12.029Z"
   },
   "slots": [
     {
@@ -10009,20 +10009,6 @@
       "_links": {
         "address": {
           "href": "/api/v3/doctors/350774/addresses/966936",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-02-25T07:30:00+01:00",
-      "doctor_id": 379624,
-      "address_id": 1042766,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/379624/addresses/1042766",
           "method": "get"
         }
       }
