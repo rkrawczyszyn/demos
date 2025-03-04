@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-03-04T14:00:13.279Z"
+    "updatedOn": "2025-03-04T15:00:13.735Z"
   },
   "slots": [
     {
@@ -46,62 +46,6 @@
       }
     },
     {
-      "start": "2025-03-05T07:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-05T08:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-05T09:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-05T10:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-03-05T16:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
@@ -130,7 +74,7 @@
       }
     },
     {
-      "start": "2025-03-06T07:00:00+01:00",
+      "start": "2025-03-05T18:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -144,7 +88,7 @@
       }
     },
     {
-      "start": "2025-03-06T08:00:00+01:00",
+      "start": "2025-03-06T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -158,21 +102,7 @@
       }
     },
     {
-      "start": "2025-03-06T09:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-06T09:00:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-06T16:00:00+01:00",
+      "start": "2025-03-06T15:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -186,7 +116,7 @@
       }
     },
     {
-      "start": "2025-03-06T17:00:00+01:00",
+      "start": "2025-03-06T15:30:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -200,7 +130,7 @@
       }
     },
     {
-      "start": "2025-03-06T18:00:00+01:00",
+      "start": "2025-03-06T16:30:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -214,7 +144,7 @@
       }
     },
     {
-      "start": "2025-03-06T19:00:00+01:00",
+      "start": "2025-03-06T17:30:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -228,7 +158,21 @@
       }
     },
     {
-      "start": "2025-03-07T07:00:00+01:00",
+      "start": "2025-03-06T18:30:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": null,
+      "booked": true,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-06T19:30:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -354,11 +298,11 @@
       }
     },
     {
-      "start": "2025-03-11T07:00:00+01:00",
+      "start": "2025-03-11T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-11T13:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -368,11 +312,11 @@
       }
     },
     {
-      "start": "2025-03-11T08:00:00+01:00",
+      "start": "2025-03-11T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-11T14:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -382,11 +326,11 @@
       }
     },
     {
-      "start": "2025-03-11T09:00:00+01:00",
+      "start": "2025-03-11T15:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-11T15:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -452,11 +396,11 @@
       }
     },
     {
-      "start": "2025-03-13T07:00:00+01:00",
+      "start": "2025-03-12T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-12T13:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -466,11 +410,11 @@
       }
     },
     {
-      "start": "2025-03-13T08:00:00+01:00",
+      "start": "2025-03-12T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-12T14:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -480,11 +424,11 @@
       }
     },
     {
-      "start": "2025-03-13T09:00:00+01:00",
+      "start": "2025-03-12T15:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-12T15:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -494,11 +438,53 @@
       }
     },
     {
-      "start": "2025-03-13T10:00:00+01:00",
+      "start": "2025-03-12T18:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-12T18:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-13T13:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-13T13:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-13T14:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-13T14:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-13T15:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-13T15:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -551,20 +537,6 @@
     },
     {
       "start": "2025-03-13T19:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-14T07:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -690,38 +662,10 @@
       }
     },
     {
-      "start": "2025-03-18T07:00:00+01:00",
+      "start": "2025-03-18T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-18T08:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-18T09:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-18T09:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-18T13:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -732,10 +676,24 @@
       }
     },
     {
-      "start": "2025-03-18T10:00:00+01:00",
+      "start": "2025-03-18T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-18T10:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-18T14:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-18T15:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-18T15:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -802,24 +760,10 @@
       }
     },
     {
-      "start": "2025-03-19T07:00:00+01:00",
+      "start": "2025-03-19T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-19T09:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-19T09:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-19T13:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -830,10 +774,24 @@
       }
     },
     {
-      "start": "2025-03-19T10:00:00+01:00",
+      "start": "2025-03-19T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-19T10:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-19T14:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-19T15:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-19T15:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -872,7 +830,7 @@
       }
     },
     {
-      "start": "2025-03-20T07:00:00+01:00",
+      "start": "2025-03-19T18:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -886,11 +844,39 @@
       }
     },
     {
-      "start": "2025-03-20T09:00:00+01:00",
+      "start": "2025-03-20T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-20T09:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-20T13:00:00+01:00",
       "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-20T14:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-20T14:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-20T15:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -943,20 +929,6 @@
     },
     {
       "start": "2025-03-20T19:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-21T07:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
       "booking_url": null,
@@ -1110,10 +1082,10 @@
       }
     },
     {
-      "start": "2025-03-25T08:00:00+01:00",
+      "start": "2025-03-25T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-25T08:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-25T13:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1124,10 +1096,10 @@
       }
     },
     {
-      "start": "2025-03-25T09:00:00+01:00",
+      "start": "2025-03-25T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-25T09:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-25T14:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1138,11 +1110,11 @@
       }
     },
     {
-      "start": "2025-03-25T10:00:00+01:00",
+      "start": "2025-03-25T15:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-25T15:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -1194,10 +1166,10 @@
       }
     },
     {
-      "start": "2025-03-26T08:00:00+01:00",
+      "start": "2025-03-26T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T08:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T13:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1208,11 +1180,11 @@
       }
     },
     {
-      "start": "2025-03-26T09:00:00+01:00",
+      "start": "2025-03-26T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T14:00:00+01:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -1222,10 +1194,10 @@
       }
     },
     {
-      "start": "2025-03-26T10:00:00+01:00",
+      "start": "2025-03-26T15:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T10:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T15:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1264,24 +1236,10 @@
       }
     },
     {
-      "start": "2025-03-27T07:00:00+01:00",
+      "start": "2025-03-26T18:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-03-27T08:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T08:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-26T18:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1292,10 +1250,10 @@
       }
     },
     {
-      "start": "2025-03-27T09:00:00+01:00",
+      "start": "2025-03-27T13:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T09:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T13:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1306,10 +1264,24 @@
       }
     },
     {
-      "start": "2025-03-27T10:00:00+01:00",
+      "start": "2025-03-27T14:00:00+01:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T10:00:00+01:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T14:00:00+01:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-03-27T15:00:00+01:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-03-27T15:00:00+01:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1586,6 +1558,48 @@
       }
     },
     {
+      "start": "2025-04-01T13:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-01T13:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-01T14:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-01T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-01T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-01T15:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
       "start": "2025-04-01T16:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
@@ -1642,11 +1656,11 @@
       }
     },
     {
-      "start": "2025-04-02T07:00:00+02:00",
+      "start": "2025-04-02T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-02T13:00:00+02:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -1656,10 +1670,24 @@
       }
     },
     {
-      "start": "2025-04-02T08:00:00+02:00",
+      "start": "2025-04-02T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-02T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-02T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-02T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-02T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1698,24 +1726,10 @@
       }
     },
     {
-      "start": "2025-04-03T07:00:00+02:00",
+      "start": "2025-04-02T18:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-04-03T08:00:00+02:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-02T18:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1726,10 +1740,10 @@
       }
     },
     {
-      "start": "2025-04-03T09:00:00+02:00",
+      "start": "2025-04-03T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T09:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T13:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1740,10 +1754,24 @@
       }
     },
     {
-      "start": "2025-04-03T10:00:00+02:00",
+      "start": "2025-04-03T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T10:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-03T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-03T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1838,10 +1866,10 @@
       }
     },
     {
-      "start": "2025-04-08T07:00:00+02:00",
+      "start": "2025-04-08T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T07:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T13:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1852,10 +1880,10 @@
       }
     },
     {
-      "start": "2025-04-08T08:00:00+02:00",
+      "start": "2025-04-08T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T14:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1866,24 +1894,10 @@
       }
     },
     {
-      "start": "2025-04-08T09:00:00+02:00",
+      "start": "2025-04-08T15:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T09:00:00+02:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-04-08T10:00:00+02:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T10:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -1925,8 +1939,8 @@
       "start": "2025-04-08T18:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-08T18:00:00+02:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -1950,11 +1964,95 @@
       }
     },
     {
-      "start": "2025-04-10T07:00:00+02:00",
+      "start": "2025-04-09T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-09T13:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-09T14:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-09T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-09T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-09T15:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-09T18:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-09T18:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-10T13:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-10T13:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-10T14:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-10T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-10T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-10T15:00:00+02:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
@@ -2065,21 +2163,7 @@
       "start": "2025-04-14T18:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-04-15T07:00:00+02:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T07:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-14T18:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2090,10 +2174,10 @@
       }
     },
     {
-      "start": "2025-04-15T08:00:00+02:00",
+      "start": "2025-04-15T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T13:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2104,10 +2188,10 @@
       }
     },
     {
-      "start": "2025-04-15T09:00:00+02:00",
+      "start": "2025-04-15T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T09:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T14:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2118,10 +2202,10 @@
       }
     },
     {
-      "start": "2025-04-15T10:00:00+02:00",
+      "start": "2025-04-15T15:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T10:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2149,8 +2233,8 @@
       "start": "2025-04-15T17:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-15T17:00:00+02:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -2188,10 +2272,10 @@
       }
     },
     {
-      "start": "2025-04-16T07:00:00+02:00",
+      "start": "2025-04-16T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T07:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T13:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2202,10 +2286,10 @@
       }
     },
     {
-      "start": "2025-04-16T08:00:00+02:00",
+      "start": "2025-04-16T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T14:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2216,24 +2300,10 @@
       }
     },
     {
-      "start": "2025-04-16T09:00:00+02:00",
+      "start": "2025-04-16T15:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T09:00:00+02:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-04-16T10:00:00+02:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T10:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2272,24 +2342,10 @@
       }
     },
     {
-      "start": "2025-04-17T07:00:00+02:00",
+      "start": "2025-04-16T18:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
-    {
-      "start": "2025-04-17T08:00:00+02:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T08:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-16T18:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2300,10 +2356,10 @@
       }
     },
     {
-      "start": "2025-04-17T09:00:00+02:00",
+      "start": "2025-04-17T13:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T09:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T13:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2314,10 +2370,24 @@
       }
     },
     {
-      "start": "2025-04-17T10:00:00+02:00",
+      "start": "2025-04-17T14:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T10:00:00+02:00",
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T14:00:00+02:00",
+      "booked": false,
+      "grouped": false,
+      "_links": {
+        "address": {
+          "href": "/api/v3/doctors/350711/addresses/1074094",
+          "method": "get"
+        }
+      }
+    },
+    {
+      "start": "2025-04-17T15:00:00+02:00",
+      "doctor_id": 350711,
+      "address_id": 1074094,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T15:00:00+02:00",
       "booked": false,
       "grouped": false,
       "_links": {
@@ -2359,8 +2429,8 @@
       "start": "2025-04-17T18:00:00+02:00",
       "doctor_id": 350711,
       "address_id": 1074094,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350711/1074094/2025-04-17T18:00:00+02:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -7763,8 +7833,8 @@
       "start": "2025-03-19T13:00:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-03-19T13:00:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -7777,8 +7847,8 @@
       "start": "2025-03-19T13:30:00+01:00",
       "doctor_id": 379624,
       "address_id": 1042766,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/379624/1042766/2025-03-19T13:30:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
@@ -17182,20 +17252,6 @@
       }
     },
     {
-      "start": "2025-03-04T16:15:00+01:00",
-      "doctor_id": 302078,
-      "address_id": 902740,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-03-04T16:15:00+01:00",
-      "booked": false,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/302078/addresses/902740",
-          "method": "get"
-        }
-      }
-    },
-    {
       "start": "2025-03-04T17:00:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
@@ -17255,8 +17311,8 @@
       "start": "2025-03-05T09:30:00+01:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-03-05T09:30:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
