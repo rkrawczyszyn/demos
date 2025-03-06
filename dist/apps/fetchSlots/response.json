@@ -1,22 +1,8 @@
 {
   "metadata": {
-    "updatedOn": "2025-03-06T18:00:13.743Z"
+    "updatedOn": "2025-03-06T19:00:12.304Z"
   },
   "slots": [
-    {
-      "start": "2025-03-06T19:00:00+01:00",
-      "doctor_id": 350711,
-      "address_id": 1074094,
-      "booking_url": null,
-      "booked": true,
-      "grouped": false,
-      "_links": {
-        "address": {
-          "href": "/api/v3/doctors/350711/addresses/1074094",
-          "method": "get"
-        }
-      }
-    },
     {
       "start": "2025-03-07T08:00:00+01:00",
       "doctor_id": 350711,
