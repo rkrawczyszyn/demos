@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-03-10T00:00:16.952Z"
+    "updatedOn": "2025-03-10T01:00:16.886Z"
   },
   "slots": [
     {
@@ -6349,8 +6349,8 @@
       "start": "2025-03-10T09:25:00+01:00",
       "doctor_id": 350774,
       "address_id": 966936,
-      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/350774/966936/2025-03-10T09:25:00+01:00",
-      "booked": false,
+      "booking_url": null,
+      "booked": true,
       "grouped": false,
       "_links": {
         "address": {
