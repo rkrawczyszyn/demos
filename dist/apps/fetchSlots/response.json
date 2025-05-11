@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "updatedOn": "2025-05-11T09:00:14.829Z"
+    "updatedOn": "2025-05-11T10:00:13.297Z"
   },
   "slots": [
     {
@@ -17997,8 +17997,8 @@
       "start": "2025-05-12T11:45:00+02:00",
       "doctor_id": 302078,
       "address_id": 902740,
-      "booking_url": null,
-      "booked": true,
+      "booking_url": "https://www.znanylekarz.pl/booking/wybierz-wizyte/302078/902740/2025-05-12T11:45:00+02:00",
+      "booked": false,
       "grouped": false,
       "_links": {
         "address": {
